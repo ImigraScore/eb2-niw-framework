@@ -3,6 +3,8 @@ description: A free educational resource for EB-2 National Interest Waiver candi
 baseurl: "/eb2-niw-framework"
 url: "https://imigrascore.github.io"
 
+doi: "10.5281/zenodo.19709462"
+
 author:
   name: ImigraScore
   url: https://imigrascore.us

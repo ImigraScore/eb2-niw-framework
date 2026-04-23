@@ -14,7 +14,7 @@ EB-2 NIW: A Technical Framework for Eligibility, Evaluation, and Petition Strate
 
 ### APA 7th Edition
 
-Marinho, W. (2026). *EB-2 NIW: A technical framework for eligibility, evaluation, and petition strategy* (Version 1.0) [Technical framework]. Zenodo. DOI pending.
+Marinho, W. (2026). *EB-2 NIW: A technical framework for eligibility, evaluation, and petition strategy* (Version 1.0) [Technical framework]. Zenodo. https://doi.org/10.5281/zenodo.19709462
 
 ### BibTeX
 
@@ -26,11 +26,10 @@ Marinho, W. (2026). *EB-2 NIW: A technical framework for eligibility, evaluation
   year      = {2026},
   version   = {1.0},
   publisher = {Zenodo},
-  note      = {DOI pending (Zenodo deposit planned)}
+  doi       = {10.5281/zenodo.19709462},
+  url       = {https://doi.org/10.5281/zenodo.19709462}
 }
 ```
-
-*Zenodo DOI is pending. Replace XXXXXXX with the assigned identifier after deposit.*
 
 ---
 

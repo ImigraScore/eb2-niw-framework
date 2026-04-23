@@ -1,0 +1,42 @@
+cff-version: 1.2.0
+message: "If you use this framework, please cite it as below."
+title: "The EB-2 NIW Framework: Eligibility, Dhanasar Prongs, and Petition Strategy"
+type: software
+authors:
+  - family-names: Marinho
+    given-names: Wederson
+    orcid: "https://orcid.org/0009-0004-6401-3465"
+    affiliation: ImigraScore
+version: "1.0"
+date-released: "2026-04-23"
+doi: "10.5281/zenodo.19709462"
+url: "https://github.com/ImigraScore/eb2-niw-framework"
+repository-code: "https://github.com/ImigraScore/eb2-niw-framework"
+license: "CC-BY-4.0"
+keywords:
+  - EB-2 NIW
+  - National Interest Waiver
+  - Matter of Dhanasar
+  - USCIS
+  - immigration
+  - Dhanasar prongs
+  - self-petition
+  - RFE analysis
+abstract: >-
+  A structured educational and analytical framework for interpreting
+  and applying the Matter of Dhanasar standard (26 I&N Dec. 884,
+  AAO 2016) within U.S. EB-2 National Interest Waiver adjudication.
+  Built on primary legal authorities and aligned with the January 2025
+  USCIS Policy Manual update (PA-2025-03). Covers EB-2 eligibility
+  thresholds, the three-prong Dhanasar test, proposed endeavor
+  construction, evidentiary strategy, RFE risk patterns, and
+  self-assessment methodology.
+references:
+  - type: article
+    authors:
+      - family-names: Marinho
+        given-names: Wederson
+    title: "The Complete Guide to EB-2 National Interest Waiver: Comprehensive Analysis of Matter of Dhanasar for International Professionals"
+    year: 2025
+    doi: "10.2139/ssrn.5762365"
+    url: "http://dx.doi.org/10.2139/ssrn.5762365"

@@ -2,7 +2,7 @@
 ## Eligibility, Dhanasar Prongs, and Petition Strategy
 
 [![License: CC BY 4.0](https://img.shields.io/badge/License-CC%20BY%204.0-lightgrey.svg)](https://creativecommons.org/licenses/by/4.0/)
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.PENDING.svg)](https://doi.org/10.5281/zenodo.PENDING)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19709462.svg)](https://doi.org/10.5281/zenodo.19709462)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-imigrascore%2Feb2--niw--framework-blue)](https://github.com/imigrascore/eb2-niw-framework)
 
 **Version:** 1.0 (2026-04-22)  
