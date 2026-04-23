@@ -1,0 +1,9 @@
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/
+_site/
+.jekyll-cache/
+.jekyll-metadata
+Gemfile.lock

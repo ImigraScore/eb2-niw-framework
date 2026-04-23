@@ -1,0 +1,35 @@
+title: EB-2 Academy
+description: A free educational resource for EB-2 National Interest Waiver candidates. Grounded in Matter of Dhanasar.
+baseurl: "/eb2-niw-framework"
+url: "https://imigrascore.github.io"
+
+author:
+  name: ImigraScore
+  url: https://imigrascore.us
+
+show_excerpts: false
+markdown: kramdown
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+plugins:
+  - jekyll-seo-tag
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - .bundle
+  - .sass-cache
+  - .jekyll-cache
+  - gemfiles
+  - .github
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

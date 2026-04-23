@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contribute and Report Errors — EB-2 NIW Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#0f0f0e;--ink-2:#3a3a36;--ink-3:#7a7a72;--rule:#d4d0c8;--rule-2:#a8a49a;--paper:#f8f6f1;--paper-2:#f2ede4;--accent:#1a3a2a;--accent-2:#2d5c42;--accent-pale:#e8f0ec;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',system-ui,sans-serif;--font-m:'DM Mono',monospace;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{background:var(--paper);color:var(--ink);font-family:var(--font-b);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;}
+    .topbar{background:var(--accent);padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+    .topbar-brand{font-family:var(--font-d);font-size:1rem;font-weight:500;color:rgba(255,255,255,.9);text-decoration:none;}
+    .topbar-back{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
+    .topbar-back:hover{color:rgba(255,255,255,.9);}
+    main{max-width:760px;margin:0 auto;padding:3.5rem 2rem 5rem;}
+    .doc-eyebrow{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent-2);margin-bottom:.8rem;}
+    .doc-title{font-family:var(--font-d);font-size:clamp(2rem,4vw,3rem);font-weight:300;line-height:1.1;margin-bottom:1rem;}
+    .doc-title em{font-style:italic;color:var(--accent-2);}
+    .doc-meta{font-family:var(--font-m);font-size:.65rem;color:var(--ink-3);margin-bottom:2rem;}
+    .doc-intro{font-size:1rem;color:var(--ink-2);line-height:1.85;max-width:68ch;padding-bottom:2rem;border-bottom:1px solid var(--rule);margin-bottom:2.5rem;}
+    h2{font-family:var(--font-d);font-size:1.6rem;font-weight:400;margin:2.5rem 0 .9rem;padding-top:.8rem;border-top:1px solid var(--rule);color:var(--ink);}
+    h2:first-of-type{margin-top:0;border-top:none;padding-top:0;}
+    p{font-size:.93rem;color:var(--ink-2);line-height:1.85;margin-bottom:1rem;max-width:68ch;}
+    p strong{color:var(--ink);font-weight:500;}
+    ul{margin:.4rem 0 1.2rem;padding-left:1.4rem;max-width:68ch;}
+    li{font-size:.9rem;color:var(--ink-2);line-height:1.75;margin-bottom:.3rem;}
+    li strong{color:var(--ink);font-weight:500;}
+    .accept-grid{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);margin:1.2rem 0;}
+    .accept-col{padding:1.2rem;}
+    .accept-col:first-child{border-right:1px solid var(--rule);background:var(--accent-pale);}
+    .accept-lbl{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.5rem;}
+    .lbl-yes{color:var(--accent-2)}.lbl-no{color:#7a2c1a}
+    .accept-items{list-style:none;padding:0;}
+    .accept-items li{font-size:.83rem;color:var(--ink-2);line-height:1.6;margin-bottom:.25rem;padding-left:.8rem;position:relative;}
+    .accept-items li::before{position:absolute;left:0;}
+    .accept-col:first-child .accept-items li::before{content:'';color:var(--accent-2);}
+    .accept-col:last-child .accept-items li::before{content:'';color:#7a2c1a;}
+    .step-list{list-style:none;padding:0;display:flex;flex-direction:column;gap:0;border:1px solid var(--rule);margin:1.2rem 0;}
+    .step-item{padding:1rem 1.3rem;border-bottom:1px solid var(--rule);display:grid;grid-template-columns:1.8rem 1fr;gap:.8rem;align-items:baseline;}
+    .step-item:last-child{border-bottom:none;}
+    .step-n{font-family:var(--font-m);font-size:.6rem;color:var(--rule-2);}
+    .step-t{font-size:.88rem;color:var(--ink-2);line-height:1.7;}
+    .step-t strong{color:var(--ink);font-weight:500;}
+    .callout{border-left:3px solid var(--accent);background:var(--accent-pale);padding:1rem 1.2rem;margin:1.5rem 0;max-width:68ch;}
+    .callout-label{font-family:var(--font-m);font-size:.56rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-2);margin-bottom:.35rem;}
+    .callout p{font-size:.86rem;color:var(--accent);margin-bottom:0;}
+    .doc-footer{border-top:1px solid var(--rule);margin-top:4rem;padding-top:2rem;display:flex;justify-content:space-between;}
+    .doc-footer a{font-family:var(--font-m);font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);text-decoration:none;}
+    .doc-footer a:hover{color:var(--accent-2);}
+    @media(max-width:700px){.accept-grid{grid-template-columns:1fr;}.accept-col:first-child{border-right:none;border-bottom:1px solid var(--rule);}}
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <a href="./index.html" class="topbar-brand">EB-2 NIW Academy</a>
+  <a href="./index.html" class="topbar-back">Back to main site</a>
+</div>
+<main>
+  <p class="doc-eyebrow">Repository Governance</p>
+  <h1 class="doc-title">Report an Error<br><em>or Contribute</em></h1>
+  <p class="doc-meta">EB-2 NIW Academy &mdash; Maintained by ImigraScore / Author: Wederson Marinho</p>
+  <div class="doc-intro">
+    This framework is maintained as a living document. Immigration law evolves, USCIS guidance is updated periodically, and adjudication patterns shift. Community corrections and substantive contributions improve the quality of the resource for everyone who uses it. The process is simple and the standards are strict.
+  </div>
+
+  <h2>What We Accept</h2>
+  <div class="accept-grid">
+    <div class="accept-col">
+      <div class="accept-lbl lbl-yes">Accepted</div>
+      <ul class="accept-items">
+        <li>Factual corrections with a verifiable source</li>
+        <li>Citations to new or updated USCIS policy guidance</li>
+        <li>Corrections to legal citations (case names, volume numbers, page numbers)</li>
+        <li>Updates when adjudication practice has demonstrably shifted</li>
+        <li>Clarity improvements where explanation is genuinely confusing</li>
+        <li>Links to relevant government data sources</li>
+      </ul>
+    </div>
+    <div class="accept-col">
+      <div class="accept-lbl lbl-no">Not Accepted</div>
+      <ul class="accept-items">
+        <li>Legal advice or case-specific guidance</li>
+        <li>Marketing or promotional content</li>
+        <li>Unverified claims or personal anecdotes as authority</li>
+        <li>Content that contradicts the Dhanasar decision</li>
+        <li>Changes that remove or soften legal disclaimers</li>
+        <li>Attribution modifications or authorship claims</li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>How to Report an Error</h2>
+  <ol class="step-list">
+    <li class="step-item"><span class="step-n">01</span><span class="step-t"><strong>Open a GitHub Issue.</strong> Go to the repository at github.com/imigrascore/eb2-niw-framework and click "Issues," then "New Issue."</span></li>
+    <li class="step-item"><span class="step-n">02</span><span class="step-t"><strong>Identify the specific claim.</strong> Name the file, section, and the exact statement you believe is incorrect.</span></li>
+    <li class="step-item"><span class="step-n">03</span><span class="step-t"><strong>Provide the correct information and source.</strong> Where possible, link to the primary source: the USCIS Policy Manual, the Federal Register, a published case, or an official government document.</span></li>
+    <li class="step-item"><span class="step-n">04</span><span class="step-t"><strong>Wait for review.</strong> The maintainer will review your submission, verify the source, and respond within 48 hours for substantive error reports.</span></li>
+  </ol>
+
+  <h2>How to Submit a Contribution</h2>
+  <ol class="step-list">
+    <li class="step-item"><span class="step-n">01</span><span class="step-t"><strong>Fork the repository.</strong></span></li>
+    <li class="step-item"><span class="step-n">02</span><span class="step-t"><strong>Make your changes</strong> in a clearly named branch. Include your source in the commit message.</span></li>
+    <li class="step-item"><span class="step-n">03</span><span class="step-t"><strong>Submit a pull request</strong> with a description of what changed, why, and what source supports it. Changes without sources will not be merged.</span></li>
+    <li class="step-item"><span class="step-n">04</span><span class="step-t"><strong>Review criteria:</strong> accuracy (is it correct?), sourcing (is it verifiable?), compliance (does it maintain appropriate disclaimers?), and relevance (does it belong in this framework?).</span></li>
+  </ol>
+
+  <div class="callout">
+    <div class="callout-label">What this project does not accept</div>
+    <p>This is an educational framework about the legal standard, not a forum for legal advice or case-specific analysis. Questions about individual cases should be directed to a licensed immigration attorney.</p>
+  </div>
+
+  <h2>Policy Updates and Maintenance</h2>
+  <p>This framework is reviewed when USCIS issues significant policy guidance or when the Board of Immigration Appeals or the Administrative Appeals Office issues a precedent decision materially affecting EB-2 NIW adjudication. Updates are logged in the CHANGELOG.</p>
+  <p>If you are aware of a relevant policy change or new precedent decision that is not yet reflected here, please open a GitHub Issue with the specific document and its publication date.</p>
+
+  <div class="doc-footer">
+    <a href="./index.html">Back to EB-2 NIW Academy</a>
+    <a href="./CITATION.html">Citation</a>
+  </div>
+</main>
+</body>
+</html>

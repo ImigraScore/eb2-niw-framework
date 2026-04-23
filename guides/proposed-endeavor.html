@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Proposed Endeavor — EB-2 Academy</title>
+  <meta name="description" content="How to construct a credible, specific proposed endeavor for your EB-2 NIW petition under Matter of Dhanasar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#0f0f0e;--ink-2:#3a3a36;--ink-3:#7a7a72;--rule:#d4d0c8;--rule-2:#a8a49a;--paper:#f8f6f1;--paper-2:#f2ede4;--accent:#1a3a2a;--accent-2:#2d5c42;--accent-pale:#e8f0ec;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',system-ui,sans-serif;--font-m:'DM Mono',monospace;--measure:72ch;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{background:var(--paper);color:var(--ink);font-family:var(--font-b);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;}
+    .topbar{background:var(--accent);padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+    .topbar-brand{font-family:var(--font-d);font-size:1rem;font-weight:500;color:rgba(255,255,255,.9);text-decoration:none;}
+    .topbar-back{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
+    .topbar-back:hover{color:rgba(255,255,255,.9);}
+    .page-wrap{display:grid;grid-template-columns:240px 1fr;min-height:100vh;max-width:1200px;margin:0 auto;}
+    aside{border-right:1px solid var(--rule);padding:2.5rem 1.5rem;position:sticky;top:0;height:100vh;overflow-y:auto;}
+    .aside-label{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.15em;color:var(--ink-3);margin-bottom:1rem;display:block;}
+    .toc{list-style:none;}
+    .toc a{display:block;font-size:.8rem;color:var(--ink-2);text-decoration:none;padding:.55rem 0;border-bottom:1px solid var(--rule);transition:color .2s;line-height:1.4;}
+    .toc a:hover{color:var(--accent-2);}
+    .toc-section{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);padding:.8rem 0 .3rem;display:block;}
+    hr.aside-divider{border:none;border-top:1px solid var(--rule);margin:1.2rem 0;}
+    .aside-cite{background:var(--paper-2);padding:.8rem;font-family:var(--font-m);font-size:.62rem;color:var(--ink-3);line-height:1.6;}
+    .aside-cite strong{color:var(--ink-2);display:block;margin-bottom:.3rem;}
+    main{padding:3rem 3.5rem 5rem;max-width:800px;}
+    .doc-eyebrow{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent-2);margin-bottom:.8rem;}
+    .doc-title{font-family:var(--font-d);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.1;margin-bottom:1rem;}
+    .doc-title em{font-style:italic;color:var(--accent-2);}
+    .doc-meta{font-family:var(--font-m);font-size:.65rem;color:var(--ink-3);margin-bottom:2rem;}
+    .doc-intro{font-size:1.05rem;color:var(--ink-2);line-height:1.85;max-width:var(--measure);padding-bottom:2rem;border-bottom:1px solid var(--rule);margin-bottom:2.5rem;}
+    h2{font-family:var(--font-d);font-size:1.8rem;font-weight:400;margin:3rem 0 1.2rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--ink);line-height:1.2;}
+    h2:first-of-type{margin-top:0;border-top:none;padding-top:0;}
+    h3{font-family:var(--font-d);font-size:1.2rem;font-weight:400;margin:2rem 0 .8rem;color:var(--ink);}
+    h4{font-family:var(--font-b);font-size:.8rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin:1.5rem 0 .5rem;color:var(--ink-2);}
+    p{font-size:.95rem;color:var(--ink-2);line-height:1.85;margin-bottom:1.1rem;max-width:var(--measure);}
+    p strong{color:var(--ink);font-weight:500;}
+    ul,ol{margin:.5rem 0 1.2rem;padding-left:1.5rem;max-width:var(--measure);}
+    li{font-size:.92rem;color:var(--ink-2);line-height:1.75;margin-bottom:.3rem;}
+    li strong{color:var(--ink);font-weight:500;}
+    .callout{border-left:3px solid var(--accent);background:var(--accent-pale);padding:1rem 1.3rem;margin:1.5rem 0;max-width:var(--measure);}
+    .callout-label{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-2);margin-bottom:.4rem;}
+    .callout p{font-size:.88rem;color:var(--accent);margin-bottom:0;}
+    .compare{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--rule);margin:1.5rem 0;max-width:var(--measure);}
+    .compare-col{padding:1.2rem;}
+    .compare-col:first-child{border-right:1px solid var(--rule);}
+    .compare-label{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.6rem;display:block;}
+    .compare-label.weak{color:#b84a2a;}
+    .compare-label.strong{color:var(--accent-2);}
+    .compare-text{font-size:.85rem;color:var(--ink-2);line-height:1.7;font-style:italic;}
+    blockquote{border-left:2px solid var(--rule-2);padding:.8rem 1.3rem;margin:1.5rem 0;max-width:var(--measure);}
+    blockquote p{font-family:var(--font-d);font-size:1rem;font-style:italic;color:var(--ink);margin-bottom:.3rem;}
+    blockquote cite{font-family:var(--font-m);font-size:.62rem;color:var(--ink-3);}
+    hr{border:none;border-top:1px solid var(--rule);margin:2.5rem 0;}
+    .doc-footer{border-top:1px solid var(--rule);margin-top:4rem;padding-top:2rem;display:flex;justify-content:space-between;align-items:center;}
+    .doc-footer a{font-family:var(--font-m);font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);text-decoration:none;}
+    .doc-footer a:hover{color:var(--accent-2);}
+    .doc-disclaimer{margin-top:1.5rem;padding:1rem 1.2rem;background:var(--paper-2);border:1px solid var(--rule);font-size:.78rem;color:var(--ink-3);line-height:1.7;max-width:var(--measure);}
+    .doc-disclaimer strong{color:var(--ink-2);}
+    @media(max-width:800px){.page-wrap{grid-template-columns:1fr;}aside{display:none;}main{padding:2rem 1.5rem 4rem;}}
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../index.html" class="topbar-brand">EB-2 Academy</a>
+  <a href="../index.html" class="topbar-back">Back to main site</a>
+</div>
+<div class="page-wrap">
+  <aside>
+    <span class="aside-label">On this page</span>
+    <ul class="toc">
+      <li><span class="toc-section">Fundamentals</span></li>
+      <li><a href="#what-it-is">What the Proposed Endeavor Is</a></li>
+      <li><a href="#common-failures">The Four Structural Failures</a></li>
+      <li><span class="toc-section">Construction</span></li>
+      <li><a href="#components">Required Components</a></li>
+      <li><a href="#specificity">The Specificity Test</a></li>
+      <li><a href="#examples">Weak vs. Strong Examples</a></li>
+      <li><span class="toc-section">By Field</span></li>
+      <li><a href="#researchers">Researchers</a></li>
+      <li><a href="#clinicians">Clinicians</a></li>
+      <li><a href="#entrepreneurs">Entrepreneurs</a></li>
+    </ul>
+    <hr class="aside-divider">
+    <div class="aside-cite">
+      <strong>Authority</strong>
+      Matter of Dhanasar,<br>26 I&amp;N Dec. 884<br>(AAO 2016)<br><br>USCIS Policy Manual<br>Vol. 6, Part F, Ch. 5<br>Updated Jan. 2025
+    </div>
+  </aside>
+  <main>
+    <p class="doc-eyebrow">Case Construction — Prong II</p>
+    <h1 class="doc-title">The Proposed Endeavor:<br><em>A Realism Test</em></h1>
+    <p class="doc-meta">EB-2 Academy &mdash; Matter of Dhanasar, 26 I&amp;N Dec. 884 (AAO 2016) &mdash; USCIS Policy Manual PA-2025-03, January 2025</p>
+    <div class="doc-intro">
+      The proposed endeavor is the most frequently challenged element in EB-2 NIW petitions. It is the central document against which Prong II is evaluated — and a poorly constructed proposed endeavor weakens Prongs I and III as well, because it fails to establish what work will actually be done and why it matters. This guide addresses what a credible proposed endeavor requires and the structural failures most likely to generate RFEs.
+    </div>
+
+    <h2 id="what-it-is">What the Proposed Endeavor Is</h2>
+    <p>The proposed endeavor is a specific, forward-looking plan of work. It is not a career summary. It is not a statement of professional interests. It is not a continuation of everything you have done until now.</p>
+    <p>Under Dhanasar, USCIS considers the proposed endeavor when determining whether the foreign national is well positioned to advance it (Prong II) and whether that endeavor has substantial merit and national importance (Prong I). The proposed endeavor must do real work in both places — it must be specific enough to evaluate for feasibility and substantive enough to anchor a national importance argument.</p>
+    <div class="callout">
+      <div class="callout-label">Core Principle</div>
+      <p>The proposed endeavor connects your background to a national-scale benefit through a specific plan. Remove any one of those three elements and the petition loses structural integrity.</p>
+    </div>
+
+    <h2 id="common-failures">The Four Structural Failures</h2>
+    <h3>Failure 1: Career Description as Endeavor</h3>
+    <p>The most common failure. The petitioner writes what they have done and plans to continue doing, without specifying what work will actually be completed, by when, with what resources, and for what identifiable beneficiaries.</p>
+    <div class="compare">
+      <div class="compare-col">
+        <span class="compare-label weak">Career Description</span>
+        <p class="compare-text">"I will continue my research in renewable energy systems, publishing findings and collaborating with colleagues to advance the field."</p>
+      </div>
+      <div class="compare-col">
+        <span class="compare-label strong">Proposed Endeavor</span>
+        <p class="compare-text">"I will develop and validate a grid-balancing algorithm for high-penetration solar markets, targeting the 47 U.S. states with documented grid instability at solar penetration above 20%, with deployment documentation within 24 months at partner utilities in Arizona and California."</p>
+      </div>
+    </div>
+
+    <h3>Failure 2: Vague National Importance Connection</h3>
+    <p>The endeavor names a significant field but does not connect the specific work to a documented national need. "Cancer research is important" is not the same as "this specific research addresses the documented 62% five-year survival gap for stage III colorectal cancer in rural populations, as established in the NCI's 2024 Cancer Health Disparities Report."</p>
+
+    <h3>Failure 3: Unanchored to Background</h3>
+    <p>The proposed endeavor describes work that a reasonable observer could not explain why this specific petitioner — as opposed to any other professional in the field — is positioned to execute. The connection from past to future must be explicit.</p>
+
+    <h3>Failure 4: No Identifiable Resources or Collaborators</h3>
+    <p>A plan without any anchor in institutional resources, funding, collaboration, or market demand is harder to evaluate as credible. The January 2025 USCIS update made this more explicit for entrepreneurs: assertions about future job creation or economic impact without specific supporting evidence carry less weight.</p>
+
+    <h2 id="components">Required Components</h2>
+    <ul>
+      <li><strong>Specific work output</strong> — What will you create, build, publish, develop, or implement? Name it.</li>
+      <li><strong>Identified beneficiaries</strong> — Who will benefit? How many? In what sector or population?</li>
+      <li><strong>Measurable outcome</strong> — How would you or anyone else know if you succeeded?</li>
+      <li><strong>Realistic timeline</strong> — 12 to 24 months is a typical planning horizon; shorter is possible, longer is harder to defend without milestones.</li>
+      <li><strong>Connection to documented national need</strong> — What published source establishes the problem your work addresses?</li>
+      <li><strong>Execution resources</strong> — What institutional, financial, or collaborative anchors support feasibility?</li>
+    </ul>
+
+    <h2 id="specificity">The Specificity Test</h2>
+    <p>Apply this test to your draft proposed endeavor: Could anyone else in your field write the same document with only their name substituted? If yes, the endeavor is not specific enough. Could the work described be completed by someone with a substantially different background from yours? If yes, the connection to your positioning needs to be stronger.</p>
+
+    <h2 id="examples">Weak vs. Strong by Element</h2>
+    <div class="compare">
+      <div class="compare-col">
+        <span class="compare-label weak">Weak</span>
+        <p class="compare-text">"I will work on improving outcomes for patients with cardiovascular disease through clinical research and teaching."</p>
+      </div>
+      <div class="compare-col">
+        <span class="compare-label strong">Strong</span>
+        <p class="compare-text">"I will conduct a prospective study at Cleveland Clinic's Heart and Vascular Institute on remote monitoring protocols for post-MI patients in rural Ohio — where the 2024 AHA report identified a 34% higher 30-day readmission rate than urban populations — with the goal of producing validated protocols eligible for CMS reimbursement within 36 months."</p>
+      </div>
+    </div>
+
+    <h2 id="by-field">Considerations by Field</h2>
+
+    <h3 id="researchers">Researchers</h3>
+    <p>Research-focused endeavors tend to have the clearest path to national importance documentation — government funding bodies, published research priorities, and agency strategic plans often explicitly identify the gaps your work addresses. The risk for researchers is excessive abstraction: "advance the field of X" is not a proposed endeavor.</p>
+    <p>Name the specific research question, the method, the expected output (publications, validated models, clinical protocols), and the institutional affiliation or funding source that makes the plan executable.</p>
+
+    <h3 id="clinicians">Clinicians</h3>
+    <p>Clinicians often serve populations with documented shortages. HRSA designation data, CDC disease burden reports, and CMS access statistics are strong national importance anchors. The proposed endeavor should be more than "practice medicine in an underserved area" — it should describe the specific clinical contribution, the population served, and ideally a component that extends beyond individual patient care (research, training, protocol development, policy advocacy).</p>
+
+    <h3 id="entrepreneurs">Entrepreneurs</h3>
+    <p>The January 2025 USCIS guidance is most specific about entrepreneurs. A business plan is relevant but not self-executing. USCIS requires evidence of the petitioner's active, central role in a U.S.-based entity — not just ownership or executive title — and specific evidence that their particular knowledge or skills advance the proposed endeavor in ways that justify waiving the labor market test.</p>
+    <p>The proposed endeavor for entrepreneurs must go beyond the company's business model. It should describe what the petitioner specifically brings that is not readily available in the U.S. labor market, grounded in their documented track record.</p>
+
+    <div class="doc-disclaimer">
+      <strong>This guide is educational, not legal advice.</strong> Maintained by ImigraScore, a strategic intelligence service — not a law firm. Before filing any immigration petition, retain a licensed immigration attorney. Primary authority: <em>Matter of Dhanasar, 26 I&amp;N Dec. 884 (AAO 2016)</em>; USCIS Policy Manual, Vol. 6, Part F, Ch. 5 (PA-2025-03, January 15, 2025).
+    </div>
+
+    <div class="doc-footer">
+      <a href="../index.html">Back to EB-2 Academy</a>
+      <a href="./rfe-risk-signals.html">RFE Risk Signals</a>
+    </div>
+  </main>
+</div>
+</body>
+</html>

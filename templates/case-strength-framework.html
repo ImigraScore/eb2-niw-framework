@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Case Strength Framework — EB-2 Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#0f0f0e;--ink-2:#3a3a36;--ink-3:#7a7a72;--rule:#d4d0c8;--rule-2:#a8a49a;--paper:#f8f6f1;--paper-2:#f2ede4;--accent:#1a3a2a;--accent-2:#2d5c42;--accent-pale:#e8f0ec;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',system-ui,sans-serif;--font-m:'DM Mono',monospace;--measure:72ch;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{background:var(--paper);color:var(--ink);font-family:var(--font-b);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;}
+    .topbar{background:var(--accent);padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+    .topbar-brand{font-family:var(--font-d);font-size:1rem;font-weight:500;color:rgba(255,255,255,.9);text-decoration:none;}
+    .topbar-back{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6);text-decoration:none;}
+    .topbar-back:hover{color:rgba(255,255,255,.9);}
+    main{max-width:900px;margin:0 auto;padding:3rem 2rem 5rem;}
+    .doc-eyebrow{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent-2);margin-bottom:.8rem;}
+    .doc-title{font-family:var(--font-d);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.1;margin-bottom:1rem;}
+    .doc-title em{font-style:italic;color:var(--accent-2);}
+    .doc-meta{font-family:var(--font-m);font-size:.65rem;color:var(--ink-3);margin-bottom:2rem;}
+    .doc-intro{font-size:1rem;color:var(--ink-2);line-height:1.85;max-width:var(--measure);padding-bottom:2rem;border-bottom:1px solid var(--rule);margin-bottom:2.5rem;}
+    h2{font-family:var(--font-d);font-size:1.6rem;font-weight:400;margin:3rem 0 1rem;padding-top:.8rem;border-top:1px solid var(--rule);color:var(--ink);}
+    h2:first-of-type{margin-top:0;border-top:none;padding-top:0;}
+    p{font-size:.93rem;color:var(--ink-2);line-height:1.85;margin-bottom:1rem;max-width:var(--measure);}
+    p strong{color:var(--ink);font-weight:500;}
+    .prong-section{border:1px solid var(--rule);margin-bottom:2rem;}
+    .prong-hdr{padding:1rem 1.5rem;background:var(--paper-2);border-bottom:1px solid var(--rule);display:flex;align-items:baseline;gap:1rem;}
+    .prong-num{font-family:var(--font-d);font-size:2.5rem;font-weight:300;color:var(--rule-2);line-height:1;}
+    .prong-title{font-family:var(--font-d);font-size:1.2rem;font-weight:400;}
+    .prong-body{padding:1.5rem;}
+    .checklist{list-style:none;display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.5rem;}
+    .checklist li{display:grid;grid-template-columns:1.5rem 1fr;gap:.6rem;align-items:start;font-size:.88rem;color:var(--ink-2);line-height:1.6;}
+    .check-box{width:1rem;height:1rem;border:1px solid var(--rule-2);display:inline-block;flex-shrink:0;margin-top:.1rem;}
+    .score-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border:1px solid var(--rule);margin-top:1rem;}
+    .score-cell{padding:.8rem 1rem;border-right:1px solid var(--rule);text-align:center;}
+    .score-cell:last-child{border-right:none;}
+    .score-label{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.08em;color:var(--ink-3);display:block;margin-bottom:.3rem;}
+    .classification-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border:1px solid var(--rule);margin:2rem 0;}
+    .class-col{padding:1.2rem;border-right:1px solid var(--rule);}
+    .class-col:last-child{border-right:none;}
+    .class-label{font-family:var(--font-m);font-size:.6rem;text-transform:uppercase;letter-spacing:.1em;margin-bottom:.4rem;}
+    .cls-s{color:var(--accent-2)}.cls-m{color:#8b6914}.cls-b{color:#8b4a14}.cls-w{color:#7a2c1a}
+    .class-desc{font-size:.82rem;color:var(--ink-2);line-height:1.6;margin-bottom:.6rem;}
+    .class-action{font-family:var(--font-m);font-size:.6rem;color:var(--ink-3);}
+    .doc-disclaimer{margin-top:3rem;padding:1rem 1.2rem;background:var(--paper-2);border:1px solid var(--rule);font-size:.78rem;color:var(--ink-3);line-height:1.7;}
+    .doc-disclaimer strong{color:var(--ink-2);}
+    .doc-footer{border-top:1px solid var(--rule);margin-top:2rem;padding-top:1.5rem;display:flex;justify-content:space-between;}
+    .doc-footer a{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);text-decoration:none;}
+    .doc-footer a:hover{color:var(--accent-2);}
+
+    /* PRINT */
+    @media print {
+      .topbar, .doc-footer { display: none !important; }
+      body { background: white; font-size: 11pt; color: black; }
+      .prong-section, .classification-grid, .score-grid { break-inside: avoid; }
+      .doc-disclaimer { border: 1px solid #ccc; background: #f9f9f9; }
+      a { color: black; text-decoration: none; }
+    }
+    .print-hint { background: #f2ede4; border: 1px solid #d4d0c8; padding: .7rem 1rem; font-size: .78rem; color: #7a7a72; margin-bottom: 2rem; max-width: 72ch; }
+    .print-hint strong { color: #3a3a36; }
+
+    @media(max-width:700px){.score-grid,.classification-grid{grid-template-columns:1fr;}.score-cell,.class-col{border-right:none;border-bottom:1px solid var(--rule);}}
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../index.html" class="topbar-brand">EB-2 Academy</a>
+  <a href="../index.html" class="topbar-back">Back to main site</a>
+</div>
+<main>
+  <p class="doc-eyebrow">Self-Assessment Template</p>
+  <h1 class="doc-title">Case Strength<br><em>Framework</em></h1>
+  <p class="doc-meta">EB-2 Academy &mdash; Structured self-assessment against Matter of Dhanasar, 26 I&amp;N Dec. 884 (AAO 2016)</p>
+  <div class="doc-intro">
+    Work through each prong honestly. Use only evidence you can actually document — not evidence you plan to obtain. The classification result is only as reliable as the honesty of your self-assessment. This framework does not predict outcomes. It structures your understanding of where you stand.
+  </div>
+
+  <div class="print-hint"><strong>Save as PDF:</strong> Use your browser print function (Ctrl+P or Cmd+P) and select "Save as PDF." The print layout renders cleanly without navigation.</div>
+
+  <div class="prong-section">
+    <div class="prong-hdr">
+      <span class="prong-num">I</span>
+      <span class="prong-title">Substantial Merit and National Importance</span>
+    </div>
+    <div class="prong-body">
+      <p><strong>Third-party evidence inventory.</strong> List every piece of external validation you have. Count only sources independent of you and your employer.</p>
+      <ul class="checklist">
+        <li><span class="check-box"></span><span>Peer-reviewed publications (list count and journals)</span></li>
+        <li><span class="check-box"></span><span>Citations to your work by others (list count and who cited)</span></li>
+        <li><span class="check-box"></span><span>Competitive awards (list name, year, selectivity if known)</span></li>
+        <li><span class="check-box"></span><span>Patents (granted vs. pending; in use by others?)</span></li>
+        <li><span class="check-box"></span><span>Media coverage in recognized outlets (not press releases)</span></li>
+        <li><span class="check-box"></span><span>Speaking invitations at recognized conferences</span></li>
+        <li><span class="check-box"></span><span>Independent expert letters available (not from employer)</span></li>
+      </ul>
+      <p><strong>National importance documentation.</strong> Identify published sources establishing a documented national need your work addresses.</p>
+      <ul class="checklist">
+        <li><span class="check-box"></span><span>Government agency report documenting the need (NIH, CDC, NSF, DOL, etc.)</span></li>
+        <li><span class="check-box"></span><span>Peer-reviewed research establishing the problem at national scale</span></li>
+        <li><span class="check-box"></span><span>Official policy document identifying the gap your work addresses</span></li>
+      </ul>
+      <div class="score-grid">
+        <div class="score-cell"><span class="score-label">Strong</span><span style="font-size:.82rem;color:var(--ink-2);">3+ forms of third-party validation, documented national need</span></div>
+        <div class="score-cell"><span class="score-label">Moderate</span><span style="font-size:.82rem;color:var(--ink-2);">1-2 forms of validation, national need documented</span></div>
+        <div class="score-cell"><span class="score-label">Weak</span><span style="font-size:.82rem;color:var(--ink-2);">Primarily self-attestation, no published need documentation</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prong-section">
+    <div class="prong-hdr">
+      <span class="prong-num">II</span>
+      <span class="prong-title">Well Positioned to Advance the Endeavor</span>
+    </div>
+    <div class="prong-body">
+      <p><strong>Proposed endeavor assessment.</strong> Apply these tests to your draft:</p>
+      <ul class="checklist">
+        <li><span class="check-box"></span><span>Specific work output is named (not "research in X" but "develop Y to address Z")</span></li>
+        <li><span class="check-box"></span><span>Identifiable beneficiaries with approximate scale</span></li>
+        <li><span class="check-box"></span><span>Measurable outcome defined (what does success look like?)</span></li>
+        <li><span class="check-box"></span><span>Timeline specified (12-24 months typical)</span></li>
+        <li><span class="check-box"></span><span>Plan is NOT interchangeable with any other professional in your field</span></li>
+        <li><span class="check-box"></span><span>Connection from past work to proposed endeavor is explicit</span></li>
+        <li><span class="check-box"></span><span>Execution resources identified (institution, funding, collaborators)</span></li>
+      </ul>
+      <div class="score-grid">
+        <div class="score-cell"><span class="score-label">Strong</span><span style="font-size:.82rem;color:var(--ink-2);">All elements present, specific, and defensibly connected to background</span></div>
+        <div class="score-cell"><span class="score-label">Moderate</span><span style="font-size:.82rem;color:var(--ink-2);">Most elements present, minor gaps in specificity or resource identification</span></div>
+        <div class="score-cell"><span class="score-label">Weak</span><span style="font-size:.82rem;color:var(--ink-2);">Career description rather than plan; significant pivot from background</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="prong-section">
+    <div class="prong-hdr">
+      <span class="prong-num">III</span>
+      <span class="prong-title">Beneficial to Waive on Balance</span>
+    </div>
+    <div class="prong-body">
+      <p><strong>Waiver rationale.</strong> Identify which factors apply to your situation:</p>
+      <ul class="checklist">
+        <li><span class="check-box"></span><span>Nature of work makes labor certification impractical (self-employment, unique knowledge, entrepreneurial endeavor)</span></li>
+        <li><span class="check-box"></span><span>U.S. would benefit from contributions even if qualified U.S. workers exist</span></li>
+        <li><span class="check-box"></span><span>Urgency of national interest warrants forgoing labor market test</span></li>
+        <li><span class="check-box"></span><span>Work addresses documented shortage area or critical national need</span></li>
+      </ul>
+      <div class="score-grid">
+        <div class="score-cell"><span class="score-label">Strong</span><span style="font-size:.82rem;color:var(--ink-2);">Two or more factors clearly applicable with supporting evidence</span></div>
+        <div class="score-cell"><span class="score-label">Moderate</span><span style="font-size:.82rem;color:var(--ink-2);">One factor applicable, argument for balance can be constructed</span></div>
+        <div class="score-cell"><span class="score-label">Weak</span><span style="font-size:.82rem;color:var(--ink-2);">No clear basis for waiver; labor market test would likely be appropriate</span></div>
+      </div>
+    </div>
+  </div>
+
+  <h2>Overall Classification</h2>
+  <p>Classify each prong above, then apply the overall framework:</p>
+  <div class="classification-grid">
+    <div class="class-col"><div class="class-label cls-s">Strong</div><p class="class-desc">All three prongs at Strong or Moderate with no significant gaps. Minimal RFE risk.</p><span class="class-action">Proceed to attorney review and filing.</span></div>
+    <div class="class-col"><div class="class-label cls-m">Moderate</div><p class="class-desc">Two prongs solid, one with addressable weaknesses. Targeted preparation reduces risk materially.</p><span class="class-action">Address specific gaps before filing.</span></div>
+    <div class="class-col"><div class="class-label cls-b">Borderline</div><p class="class-desc">One or two prongs with significant evidentiary gaps. High RFE probability.</p><span class="class-action">Consult attorney before filing.</span></div>
+    <div class="class-col"><div class="class-label cls-w">Weak</div><p class="class-desc">Multiple prongs with insufficient evidence. Filing now is likely to produce denial or difficult RFE.</p><span class="class-action">Build evidence base first. Do not file.</span></div>
+  </div>
+
+  <div class="doc-disclaimer">
+    <strong>This template is for structured self-assessment, not for predicting outcomes.</strong> Maintained by ImigraScore — not a law firm. This framework applies the Dhanasar test to help you understand your evidentiary position. Individual case outcomes depend on specific evidence, how it is presented, and adjudicator discretion. Before filing, consult a licensed immigration attorney. Primary authority: <em>Matter of Dhanasar, 26 I&amp;N Dec. 884 (AAO 2016)</em>.
+  </div>
+
+  <div class="doc-footer">
+    <a href="../index.html">Back to EB-2 Academy</a>
+    <a href="../guides/rfe-risk-signals.html">RFE Risk Signals</a>
+  </div>
+</main>
+</body>
+</html>

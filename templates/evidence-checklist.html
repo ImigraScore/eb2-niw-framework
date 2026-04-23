@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Evidence Checklist — EB-2 Academy</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#0f0f0e;--ink-2:#3a3a36;--ink-3:#7a7a72;--rule:#d4d0c8;--rule-2:#a8a49a;--paper:#f8f6f1;--paper-2:#f2ede4;--accent:#1a3a2a;--accent-2:#2d5c42;--accent-pale:#e8f0ec;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',system-ui,sans-serif;--font-m:'DM Mono',monospace;--measure:72ch;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{background:var(--paper);color:var(--ink);font-family:var(--font-b);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;}
+    .topbar{background:var(--accent);padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+    .topbar-brand{font-family:var(--font-d);font-size:1rem;font-weight:500;color:rgba(255,255,255,.9);text-decoration:none;}
+    .topbar-back{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6);text-decoration:none;}
+    .topbar-back:hover{color:rgba(255,255,255,.9);}
+    main{max-width:900px;margin:0 auto;padding:3rem 2rem 5rem;}
+    .doc-eyebrow{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent-2);margin-bottom:.8rem;}
+    .doc-title{font-family:var(--font-d);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.1;margin-bottom:1rem;}
+    .doc-title em{font-style:italic;color:var(--accent-2);}
+    .doc-meta{font-family:var(--font-m);font-size:.65rem;color:var(--ink-3);margin-bottom:2rem;}
+    .doc-intro{font-size:1rem;color:var(--ink-2);line-height:1.85;max-width:var(--measure);padding-bottom:2rem;border-bottom:1px solid var(--rule);margin-bottom:2.5rem;}
+    h2{font-family:var(--font-d);font-size:1.6rem;font-weight:400;margin:3rem 0 1rem;padding-top:.8rem;border-top:1px solid var(--rule);color:var(--ink);}
+    h2:first-of-type{margin-top:0;border-top:none;padding-top:0;}
+    h3{font-size:1rem;font-weight:500;margin:1.5rem 0 .5rem;}
+    p{font-size:.93rem;color:var(--ink-2);line-height:1.85;margin-bottom:1rem;max-width:var(--measure);}
+    p strong{color:var(--ink);font-weight:500;}
+    .input-line{border-bottom:1px solid var(--rule-2);display:inline-block;min-width:3rem;margin:0 .3rem;}
+    .prong-section{border:1px solid var(--rule);margin-bottom:2rem;}
+    .prong-hdr{padding:1rem 1.5rem;background:var(--paper-2);border-bottom:1px solid var(--rule);display:flex;align-items:baseline;gap:1rem;}
+    .prong-title{font-family:var(--font-d);font-size:1.2rem;font-weight:400;}
+    .prong-body{padding:1.5rem;}
+    .checklist{list-style:none;display:flex;flex-direction:column;gap:.8rem;margin-bottom:1.5rem;}
+    .checklist li{display:grid;grid-template-columns:1.5rem 1fr;gap:.6rem;align-items:start;font-size:.88rem;color:var(--ink-2);line-height:1.6;}
+    .check-box{width:1rem;height:1rem;border:1px solid var(--rule-2);display:inline-block;flex-shrink:0;margin-top:.1rem;}
+    .doc-disclaimer{margin-top:3rem;padding:1rem 1.2rem;background:var(--paper-2);border:1px solid var(--rule);font-size:.78rem;color:var(--ink-3);line-height:1.7;}
+    .doc-disclaimer strong{color:var(--ink-2);}
+    .doc-footer{border-top:1px solid var(--rule);margin-top:2rem;padding-top:1.5rem;display:flex;justify-content:space-between;}
+    .doc-footer a{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);text-decoration:none;}
+    .doc-footer a:hover{color:var(--accent-2);}
+    .note-box { background: var(--paper-2); padding: 1rem; border-left: 3px solid var(--accent-2); font-size: .85rem; margin-bottom: 1.5rem; }
+
+    /* PRINT */
+    @media print {
+      .topbar, .doc-footer { display: none !important; }
+      body { background: white; font-size: 11pt; color: black; }
+      .prong-section { break-inside: avoid; }
+      .doc-disclaimer { border: 1px solid #ccc; background: #f9f9f9; }
+      a { color: black; text-decoration: none; }
+    }
+    .print-hint { background: #f2ede4; border: 1px solid #d4d0c8; padding: .7rem 1rem; font-size: .78rem; color: #7a7a72; margin-bottom: 2rem; max-width: 72ch; }
+    .print-hint strong { color: #3a3a36; }
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../index.html" class="topbar-brand">EB-2 Academy</a>
+  <a href="../index.html" class="topbar-back">Back to main site</a>
+</div>
+<main>
+  <p class="doc-eyebrow">Self-Assessment Template</p>
+  <h1 class="doc-title">Evidence<br><em>Checklist</em></h1>
+  <p class="doc-meta">EB-2 Academy &mdash; Substantial Merit Evidence Inventory</p>
+  
+  <div class="doc-intro">
+    Use this checklist to inventory all third-party evidence of your impact and accomplishment. Be thorough and specific—vagueness is a red flag. For each category below, list <strong>specific, quantifiable evidence</strong>. Don't estimate. Use actual numbers and documentation you can provide.
+  </div>
+
+  <div class="print-hint"><strong>Save as PDF:</strong> Use your browser print function (Ctrl+P or Cmd+P) and select "Save as PDF." The print layout renders cleanly without navigation.</div>
+
+  <div class="note-box">
+    <strong>Format example:</strong><br>
+    ❌ "I've published many papers"<br>
+    ✅ "12 peer-reviewed publications in journals with average IF 3.5, including [Journal 1], [Journal 2], [Journal 3]"
+  </div>
+
+  <div class="prong-section">
+    <div class="prong-hdr">
+      <span class="prong-title">Peer-Reviewed Publications</span>
+    </div>
+    <div class="prong-body">
+      <p><strong>Count:</strong> <span class="input-line" style="width:3rem;"></span> total peer-reviewed publications</p>
+      <p><strong>In top-tier venues (impact factor >3 or equivalent):</strong> <span class="input-line" style="width:3rem;"></span> publications</p>
+      
+      <h3>List the top 5 by impact:</h3>
+      <ul class="checklist" style="margin-top: 1rem;">
+        <li><span class="check-box"></span><span><strong>Publication:</strong> <span class="input-line" style="width:80%;"></span><br>Journal: <span class="input-line" style="width:40%;"></span> Year: <span class="input-line" style="width:10%;"></span> Citations: <span class="input-line" style="width:10%;"></span></span></li>
+        <li><span class="check-box"></span><span><strong>Publication:</strong> <span class="input-line" style="width:80%;"></span><br>Journal: <span class="input-line" style="width:40%;"></span> Year: <span class="input-line" style="width:10%;"></span> Citations: <span class="input-line" style="width:10%;"></span></span></li>
+        <li><span class="check-box"></span><span><strong>Publication:</strong> <span class="input-line" style="width:80%;"></span><br>Journal: <span class="input-line" style="width:40%;"></span> Year: <span class="input-line" style="width:10%;"></span> Citations: <span class="input-line" style="width:10%;"></span></span></li>
+        <li><span class="check-box"></span><span><strong>Publication:</strong> <span class="input-line" style="width:80%;"></span><br>Journal: <span class="input-line" style="width:40%;"></span> Year: <span class="input-line" style="width:10%;"></span> Citations: <span class="input-line" style="width:10%;"></span></span></li>
+        <li><span class="check-box"></span><span><strong>Publication:</strong> <span class="input-line" style="width:80%;"></span><br>Journal: <span class="input-line" style="width:40%;"></span> Year: <span class="input-line" style="width:10%;"></span> Citations: <span class="input-line" style="width:10%;"></span></span></li>
+      </ul>
+      <p><strong>Total citations to your publications:</strong> <span class="input-line" style="width:4rem;"></span></p>
+      <p><strong>Can you document this with a Google Scholar or ResearchGate profile link?</strong> <span class="input-line" style="width:3rem;"></span></p>
+    </div>
+  </div>
+
+  <div class="prong-section">
+    <div class="prong-hdr">
+      <span class="prong-title">Patents & Innovations</span>
+    </div>
+    <div class="prong-body">
+      <p><strong>Count:</strong> <span class="input-line" style="width:3rem;"></span> total patents</p>
+      <p><strong>Granted:</strong> <span class="input-line" style="width:2rem;"></span> &nbsp;&nbsp; <strong>Pending:</strong> <span class="input-line" style="width:2rem;"></span> &nbsp;&nbsp; <strong>In use/commercialized:</strong> <span class="input-line" style="width:2rem;"></span></p>
+      
+      <h3>List major patents:</h3>
+      <ul class="checklist" style="margin-top: 1rem;">
+        <li><span class="check-box"></span><span><strong>Patent:</strong> <span class="input-line" style="width:80%;"></span><br>Number: <span class="input-line" style="width:30%;"></span> Status: <span class="input-line" style="width:20%;"></span> Date: <span class="input-line" style="width:15%;"></span></span></li>
+        <li><span class="check-box"></span><span><strong>Patent:</strong> <span class="input-line" style="width:80%;"></span><br>Number: <span class="input-line" style="width:30%;"></span> Status: <span class="input-line" style="width:20%;"></span> Date: <span class="input-line" style="width:15%;"></span></span></li>
+        <li><span class="check-box"></span><span><strong>Patent:</strong> <span class="input-line" style="width:80%;"></span><br>Number: <span class="input-line" style="width:30%;"></span> Status: <span class="input-line" style="width:20%;"></span> Date: <span class="input-line" style="width:15%;"></span></span></li>
+      </ul>
+      <p><strong>Are any patents commercialized or actively used in industry?</strong> <span class="input-line" style="width:3rem;"></span><br>
+      <span style="font-size:0.85rem; color:var(--ink-3);">If yes, by whom: <span class="input-line" style="width:60%;"></span></span></p>
+    </div>
+  </div>
+
+  <div class="prong-section">
+    <div class="prong-hdr">
+      <span class="prong-title">Awards, Honors, and Recognition</span>
+    </div>
+    <div class="prong-body">
+      <p><strong>Count:</strong> <span class="input-line" style="width:3rem;"></span> total awards</p>
+      
+      <h3>Major awards (national or internationally competitive):</h3>
+      <ul class="checklist" style="margin-top: 1rem;">
+        <li><span class="check-box"></span><span><strong>Award:</strong> <span class="input-line" style="width:80%;"></span><br>Issuer: <span class="input-line" style="width:40%;"></span> Year: <span class="input-line" style="width:10%;"></span><br>Competitiveness: <span class="input-line" style="width:60%;"></span></span></li>
+        <li><span class="check-box"></span><span><strong>Award:</strong> <span class="input-line" style="width:80%;"></span><br>Issuer: <span class="input-line" style="width:40%;"></span> Year: <span class="input-line" style="width:10%;"></span><br>Competitiveness: <span class="input-line" style="width:60%;"></span></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="prong-section">
+    <div class="prong-hdr">
+      <span class="prong-title">Media Coverage and Public Recognition</span>
+    </div>
+    <div class="prong-body">
+      <p><strong>Count:</strong> <span class="input-line" style="width:3rem;"></span> media mentions</p>
+      <ul class="checklist" style="margin-top: 1rem;">
+        <li><span class="check-box"></span><span><strong>Publication:</strong> <span class="input-line" style="width:40%;"></span> Date: <span class="input-line" style="width:20%;"></span><br>Subject: <span class="input-line" style="width:80%;"></span></span></li>
+        <li><span class="check-box"></span><span><strong>Publication:</strong> <span class="input-line" style="width:40%;"></span> Date: <span class="input-line" style="width:20%;"></span><br>Subject: <span class="input-line" style="width:80%;"></span></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="prong-section">
+    <div class="prong-hdr">
+      <span class="prong-title">Grants and Funding</span>
+    </div>
+    <div class="prong-body">
+      <p><strong>Total grants awarded:</strong> <span class="input-line" style="width:3rem;"></span> &nbsp;&nbsp; <strong>Total funding amount:</strong> $<span class="input-line" style="width:6rem;"></span></p>
+      <p><strong>As PI:</strong> <span class="input-line" style="width:2rem;"></span> grants ($<span class="input-line" style="width:4rem;"></span>) &nbsp;&nbsp; <strong>As Co-I:</strong> <span class="input-line" style="width:2rem;"></span> grants ($<span class="input-line" style="width:4rem;"></span>)</p>
+      <ul class="checklist" style="margin-top: 1rem;">
+        <li><span class="check-box"></span><span><strong>Grant:</strong> <span class="input-line" style="width:50%;"></span> Amount: $<span class="input-line" style="width:20%;"></span><br>Funder: <span class="input-line" style="width:40%;"></span> Role: <span class="input-line" style="width:20%;"></span></span></li>
+        <li><span class="check-box"></span><span><strong>Grant:</strong> <span class="input-line" style="width:50%;"></span> Amount: $<span class="input-line" style="width:20%;"></span><br>Funder: <span class="input-line" style="width:40%;"></span> Role: <span class="input-line" style="width:20%;"></span></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="prong-section">
+    <div class="prong-hdr">
+      <span class="prong-title">Other Categories</span>
+    </div>
+    <div class="prong-body">
+      <ul class="checklist">
+        <li><span class="check-box"></span><span><strong>Keynotes & Presentations:</strong> <span class="input-line" style="width:3rem;"></span> keynotes, <span class="input-line" style="width:3rem;"></span> invited talks</span></li>
+        <li><span class="check-box"></span><span><strong>Editorial Roles:</strong> <span class="input-line" style="width:3rem;"></span> current, <span class="input-line" style="width:3rem;"></span> past</span></li>
+        <li><span class="check-box"></span><span><strong>Products/Software Created:</strong> <span class="input-line" style="width:80%;"></span></span></li>
+        <li><span class="check-box"></span><span><strong>Teaching/Mentorship:</strong> <span class="input-line" style="width:3rem;"></span> students advised, <span class="input-line" style="width:3rem;"></span> courses taught</span></li>
+      </ul>
+    </div>
+  </div>
+
+  <h2>Summary and Action Items</h2>
+  <div class="prong-section" style="border-color:var(--accent-2);">
+    <div class="prong-body">
+      <p><strong>Total evidence items counted:</strong> <span class="input-line" style="width:4rem;"></span></p>
+      
+      <h3>Strongest evidence (top 3):</h3>
+      <ol style="margin-left: 2rem; margin-bottom: 1rem; font-size:.9rem; line-height: 1.8;">
+        <li><span class="input-line" style="width:90%;"></span></li>
+        <li><span class="input-line" style="width:90%;"></span></li>
+        <li><span class="input-line" style="width:90%;"></span></li>
+      </ol>
+      
+      <h3>Action Items (Gather before filing):</h3>
+      <ul class="checklist" style="margin-top: 1rem;">
+        <li><span class="check-box"></span><span><span class="input-line" style="width:90%;"></span></span></li>
+        <li><span class="check-box"></span><span><span class="input-line" style="width:90%;"></span></span></li>
+        <li><span class="check-box"></span><span><span class="input-line" style="width:90%;"></span></span></li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="doc-disclaimer">
+    <strong>This checklist is for structured evidence gathering.</strong> Maintained by ImigraScore — not a law firm. This framework helps you organize documentation for the Dhanasar test. Individual case outcomes depend on specific evidence, how it is presented, and adjudicator discretion. Primary authority: <em>Matter of Dhanasar, 26 I&amp;N Dec. 884 (AAO 2016)</em>.
+  </div>
+
+  <div class="doc-footer">
+    <a href="../index.html">Back to EB-2 Academy</a>
+    <a href="./case-strength-framework.html">Case Strength Framework</a>
+  </div>
+</main>
+</body>
+</html>

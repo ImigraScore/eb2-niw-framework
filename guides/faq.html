@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Frequently Asked Questions — EB-2 Academy</title>
+  <meta name="description" content="Technical answers to real EB-2 NIW candidate questions, grounded in Matter of Dhanasar.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#0f0f0e;--ink-2:#3a3a36;--ink-3:#7a7a72;--rule:#d4d0c8;--rule-2:#a8a49a;--paper:#f8f6f1;--paper-2:#f2ede4;--accent:#1a3a2a;--accent-2:#2d5c42;--accent-pale:#e8f0ec;--font-d:'Cormorant Garamond',Georgia,serif;--font-b:'DM Sans',system-ui,sans-serif;--font-m:'DM Mono',monospace;--measure:72ch;}
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{background:var(--paper);color:var(--ink);font-family:var(--font-b);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;}
+    .topbar{background:var(--accent);padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+    .topbar-brand{font-family:var(--font-d);font-size:1rem;font-weight:500;color:rgba(255,255,255,.9);text-decoration:none;}
+    .topbar-back{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
+    .topbar-back:hover{color:rgba(255,255,255,.9);}
+    .page-wrap{display:grid;grid-template-columns:240px 1fr;min-height:100vh;max-width:1200px;margin:0 auto;}
+    aside{border-right:1px solid var(--rule);padding:2.5rem 1.5rem;position:sticky;top:0;height:100vh;overflow-y:auto;}
+    .aside-label{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.15em;color:var(--ink-3);margin-bottom:1rem;display:block;}
+    .toc{list-style:none;}
+    .toc a{display:block;font-size:.78rem;color:var(--ink-2);text-decoration:none;padding:.5rem 0;border-bottom:1px solid var(--rule);transition:color .2s;line-height:1.4;}
+    .toc a:hover{color:var(--accent-2);}
+    .toc-section{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);padding:.8rem 0 .3rem;display:block;}
+    hr.aside-divider{border:none;border-top:1px solid var(--rule);margin:1.2rem 0;}
+    .aside-cite{background:var(--paper-2);padding:.8rem;font-family:var(--font-m);font-size:.62rem;color:var(--ink-3);line-height:1.6;}
+    .aside-cite strong{color:var(--ink-2);display:block;margin-bottom:.3rem;}
+    main{padding:3rem 3.5rem 5rem;max-width:800px;}
+    .doc-eyebrow{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent-2);margin-bottom:.8rem;}
+    .doc-title{font-family:var(--font-d);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.1;margin-bottom:1rem;}
+    .doc-title em{font-style:italic;color:var(--accent-2);}
+    .doc-meta{font-family:var(--font-m);font-size:.65rem;color:var(--ink-3);margin-bottom:2rem;}
+    .doc-intro{font-size:1.05rem;color:var(--ink-2);line-height:1.85;max-width:var(--measure);padding-bottom:2rem;border-bottom:1px solid var(--rule);margin-bottom:2.5rem;}
+    h2{font-family:var(--font-d);font-size:1.6rem;font-weight:400;margin:3rem 0 1rem;padding-top:.8rem;border-top:1px solid var(--rule);color:var(--ink);line-height:1.2;}
+    h2:first-of-type{margin-top:0;border-top:none;padding-top:0;}
+    p{font-size:.95rem;color:var(--ink-2);line-height:1.85;margin-bottom:1.1rem;max-width:var(--measure);}
+    p strong{color:var(--ink);font-weight:500;}
+    ul,ol{margin:.5rem 0 1.2rem;padding-left:1.5rem;max-width:var(--measure);}
+    li{font-size:.92rem;color:var(--ink-2);line-height:1.75;margin-bottom:.3rem;}
+    .qa-item{border:1px solid var(--rule);margin:1.2rem 0;max-width:var(--measure);}
+    .qa-q{padding:.9rem 1.2rem;border-bottom:1px solid var(--rule);background:var(--paper-2);}
+    .qa-q-label{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;color:var(--accent-2);margin-bottom:.3rem;}
+    .qa-q p{font-family:var(--font-d);font-size:1.05rem;font-weight:400;color:var(--ink);margin-bottom:0;}
+    .qa-a{padding:1rem 1.2rem;}
+    .qa-a p{font-size:.9rem;margin-bottom:.7rem;}
+    .qa-a p:last-child{margin-bottom:0;}
+    .callout{border-left:3px solid var(--accent);background:var(--accent-pale);padding:1rem 1.3rem;margin:1.5rem 0;max-width:var(--measure);}
+    .callout-label{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-2);margin-bottom:.4rem;}
+    .callout p{font-size:.88rem;color:var(--accent);margin-bottom:0;}
+    hr{border:none;border-top:1px solid var(--rule);margin:2.5rem 0;}
+    .doc-footer{border-top:1px solid var(--rule);margin-top:4rem;padding-top:2rem;display:flex;justify-content:space-between;align-items:center;}
+    .doc-footer a{font-family:var(--font-m);font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);text-decoration:none;}
+    .doc-footer a:hover{color:var(--accent-2);}
+    .doc-disclaimer{margin-top:1.5rem;padding:1rem 1.2rem;background:var(--paper-2);border:1px solid var(--rule);font-size:.78rem;color:var(--ink-3);line-height:1.7;max-width:var(--measure);}
+    .doc-disclaimer strong{color:var(--ink-2);}
+    @media(max-width:800px){.page-wrap{grid-template-columns:1fr;}aside{display:none;}main{padding:2rem 1.5rem 4rem;}}
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../index.html" class="topbar-brand">EB-2 Academy</a>
+  <a href="../index.html" class="topbar-back">Back to main site</a>
+</div>
+<div class="page-wrap">
+  <aside>
+    <span class="aside-label">Topics</span>
+    <ul class="toc">
+      <li><span class="toc-section">Eligibility</span></li>
+      <li><a href="#q-degree">Do I need a master's degree?</a></li>
+      <li><a href="#q-publications">Do I need publications?</a></li>
+      <li><a href="#q-employer">Do I need a U.S. employer?</a></li>
+      <li><span class="toc-section">The Case</span></li>
+      <li><a href="#q-strong">How do I know if my case is strong?</a></li>
+      <li><a href="#q-niw-vs-perm">NIW vs. PERM — which to choose?</a></li>
+      <li><a href="#q-endeavor">Can I change my endeavor later?</a></li>
+      <li><span class="toc-section">Evidence</span></li>
+      <li><a href="#q-letters">How many letters do I need?</a></li>
+      <li><a href="#q-no-citations">What if I have no citations?</a></li>
+      <li><span class="toc-section">Process</span></li>
+      <li><a href="#q-rfe">What happens if I get an RFE?</a></li>
+      <li><a href="#q-timeline">How long does it take?</a></li>
+      <li><a href="#q-premium">What is Premium Processing?</a></li>
+    </ul>
+    <hr class="aside-divider">
+    <div class="aside-cite">
+      <strong>Authority</strong>
+      Matter of Dhanasar,<br>26 I&amp;N Dec. 884<br>(AAO 2016)
+    </div>
+  </aside>
+  <main>
+    <p class="doc-eyebrow">Candidate Reference — Q&A Format</p>
+    <h1 class="doc-title">Frequently Asked<br><em>Questions</em></h1>
+    <p class="doc-meta">EB-2 Academy &mdash; Answers grounded in Matter of Dhanasar, 26 I&amp;N Dec. 884 (AAO 2016) and USCIS Policy Manual</p>
+    <div class="doc-intro">
+      These answers are grounded in the Dhanasar framework and current USCIS guidance. They reflect how the law applies in general — your specific case will depend on your specific evidence and circumstances. These answers are not a substitute for attorney advice on your individual situation.
+    </div>
+
+    <h2>Eligibility</h2>
+
+    <div class="qa-item" id="q-degree">
+      <div class="qa-q">
+        <div class="qa-q-label">Q</div>
+        <p>Do I need a master's degree or Ph.D. to apply for EB-2 NIW?</p>
+      </div>
+      <div class="qa-a">
+        <p>Not necessarily. EB-2 requires either an advanced degree or exceptional ability. An advanced degree is a U.S. master's degree or higher (or foreign equivalent), or a U.S. bachelor's degree plus at least five years of progressive post-baccalaureate experience in the same specialty. If you hold only a bachelor's degree, you need to demonstrate five years of progressive experience that aligns with your proposed endeavor.</p>
+        <p>Alternatively, if you qualify as a person of exceptional ability — meeting at least three of the six USCIS criteria — you may not need a graduate degree at all. The exceptional ability route is less common but available.</p>
+        <p>The January 2025 USCIS policy update clarified that your intended occupation must constitute a profession requiring at least a bachelor's degree, and that five years of experience must align with the specific specialty proposed — not an adjacent field.</p>
+      </div>
+    </div>
+
+    <div class="qa-item" id="q-publications">
+      <div class="qa-q">
+        <div class="qa-q-label">Q</div>
+        <p>Do I need peer-reviewed publications to qualify?</p>
+      </div>
+      <div class="qa-a">
+        <p>No. Publications are one form of third-party validation for Prong I, but they are not required. What is required is evidence that your work has merit and that external parties — independent of you and your employer — have recognized it.</p>
+        <p>For candidates without publications, the alternatives include: patents (particularly granted patents with demonstrable use), competitive awards, citations to your work in others' publications or products, substantial open-source adoption, media coverage in credible outlets, speaking invitations at recognized conferences, and letters from independent experts who can specifically attest to the significance of your contributions.</p>
+        <p>The question USCIS is asking is: what does anyone other than you and your employer say about the value of your work? If that question has a strong answer, you have evidence for Prong I — regardless of whether that answer comes in the form of publications.</p>
+      </div>
+    </div>
+
+    <div class="qa-item" id="q-employer">
+      <div class="qa-q">
+        <div class="qa-q-label">Q</div>
+        <p>Do I need a U.S. employer to file?</p>
+      </div>
+      <div class="qa-a">
+        <p>No. The NIW is specifically designed to allow self-petitioning — you file on your own behalf without a U.S. employer sponsor. This is the defining feature of the NIW and the reason it was created: to allow individuals whose contributions to the national interest are valuable enough to justify waiving the normal labor market process.</p>
+        <p>You may also have a U.S. employer file on your behalf, but it is not required.</p>
+      </div>
+    </div>
+
+    <h2>The Case</h2>
+
+    <div class="qa-item" id="q-strong">
+      <div class="qa-q">
+        <div class="qa-q-label">Q</div>
+        <p>How do I know if my case is strong enough to file?</p>
+      </div>
+      <div class="qa-a">
+        <p>Work through the three Dhanasar prongs honestly, using third-party evidence only. For Prong I: can you document substantial merit with external validation and connect your specific work to a documented national need? For Prong II: do you have a specific, credible plan that a skeptical evaluator could assess as realistic given your background? For Prong III: is there a clear reason why the labor market process should be waived for you specifically?</p>
+        <p>If all three have defensible, evidence-supported answers, the case is likely worth filing. If one has a significant gap, targeted preparation before filing is likely more efficient than responding to a RFE after. If two or more have significant gaps, attorney consultation before filing is the appropriate step.</p>
+        <p>Use the self-assessment framework in this repository as a starting point, but recognize that it is not a substitute for professional evaluation of your specific evidence package.</p>
+      </div>
+    </div>
+
+    <div class="qa-item" id="q-niw-vs-perm">
+      <div class="qa-q">
+        <div class="qa-q-label">Q</div>
+        <p>Should I pursue NIW or EB-2 PERM?</p>
+      </div>
+      <div class="qa-a">
+        <p>This repository covers EB-2 NIW only. The decision between NIW and PERM depends on factors including whether you have or want a U.S. employer sponsor, your country of birth and the current visa bulletin priority date for your category, and the strength of your NIW case.</p>
+        <p>For nationals of countries without significant visa bulletin backlogs (most countries), NIW tends to be faster and avoids the labor market testing process. For nationals of countries with significant backlogs — notably India and China — both categories currently face the same or similar waits, and PERM may be the more practical route depending on employer sponsorship availability.</p>
+        <p>An immigration attorney is the appropriate resource for this decision, as it depends on individual circumstances this repository cannot evaluate.</p>
+      </div>
+    </div>
+
+    <div class="qa-item" id="q-endeavor">
+      <div class="qa-q">
+        <div class="qa-q-label">Q</div>
+        <p>Can I propose something different from my current job?</p>
+      </div>
+      <div class="qa-a">
+        <p>Yes, with important constraints. The proposed endeavor does not have to match your current employment exactly. What it must do is be defensibly connected to your documented background. USCIS evaluates whether you are well positioned to advance the endeavor — if your background does not obviously support it, the connection must be explicitly argued, not assumed.</p>
+        <p>A pivot that is adjacent — applying skills from one domain to a related problem in another — is typically defensible with clear explanation. A pivot that is unexplained — from software engineering to clinical medicine, for example, with nothing connecting them — is difficult to defend under Prong II.</p>
+      </div>
+    </div>
+
+    <h2>Evidence</h2>
+
+    <div class="qa-item" id="q-letters">
+      <div class="qa-q">
+        <div class="qa-q-label">Q</div>
+        <p>How many recommendation letters do I need?</p>
+      </div>
+      <div class="qa-a">
+        <p>There is no minimum number specified in the law or regulations. Quality matters substantially more than quantity. Letters that go beyond endorsing your general credentials — that speak specifically to the national importance of your proposed endeavor, your unique positioning, and the significance of your contributions from an independent expert's perspective — carry more weight than multiple generic endorsements.</p>
+        <p>At least one or two letters from experts who have no institutional affiliation with you or your employer significantly strengthens the evidentiary package. Letters from within your institution are not without value, but they carry less weight on Prong I (national importance) questions.</p>
+        <p>The January 2025 USCIS policy update specifically noted that letters are relevant but not self-executing — they require corroboration from independent evidence.</p>
+      </div>
+    </div>
+
+    <div class="qa-item" id="q-no-citations">
+      <div class="qa-q">
+        <div class="qa-q-label">Q</div>
+        <p>What if I have no citations to my work?</p>
+      </div>
+      <div class="qa-a">
+        <p>Citations are one form of evidence for Prong I, not the only form. If you have no citations, you need stronger evidence elsewhere: competitive awards, patents, substantial professional recognition, adoption of your work in practice, media coverage, or independent expert letters that can speak specifically to the significance of your contributions.</p>
+        <p>The underlying question is whether external evidence establishes that your work has merit beyond your own claims. That question can be answered without citations. But it does require some form of third-party validation. If you cannot identify any, that is a meaningful signal about case strength that should be addressed before filing.</p>
+      </div>
+    </div>
+
+    <h2>Process</h2>
+
+    <div class="qa-item" id="q-rfe">
+      <div class="qa-q">
+        <div class="qa-q-label">Q</div>
+        <p>What happens if I receive an RFE?</p>
+      </div>
+      <div class="qa-a">
+        <p>An RFE is not a denial. It is a request for additional evidence or clarification on one or more elements of your petition. You will receive a letter specifying what USCIS requires. You have a set deadline — typically 87 days from the date of the RFE — to respond.</p>
+        <p>The response must directly address each specific question raised. Non-responsive answers, or answers that introduce new evidence on different topics while failing to address the specific question, are common response errors. If you are responding to an RFE without attorney assistance, read the RFE very carefully and respond to each element in order.</p>
+        <p>If you receive an RFE, attorney consultation at that stage is strongly recommended if you are not already working with one.</p>
+      </div>
+    </div>
+
+    <div class="qa-item" id="q-timeline">
+      <div class="qa-q">
+        <div class="qa-q-label">Q</div>
+        <p>How long does the process take?</p>
+      </div>
+      <div class="qa-a">
+        <p>Processing times change and vary by service center. As of the working paper cited in this repository (Marinho, 2025), regular I-140 processing was 18-24 months at some service centers. Premium Processing (Form I-907) can reduce I-140 adjudication to 45 business days for an additional fee, and became available for NIW petitions in January 2023.</p>
+        <p>I-140 approval is only one step. If you are inside the United States and adjusting status, the I-485 processing time adds to the overall timeline. If you are outside the United States, consular processing adds time. For nationals of India and China, visa bulletin priority date backlogs in the EB-2 category can add years to the overall process regardless of I-140 processing time.</p>
+        <p>Check USCIS processing times directly at uscis.gov and the monthly visa bulletin from the Department of State for current priority date information. Both change regularly.</p>
+      </div>
+    </div>
+
+    <div class="qa-item" id="q-premium">
+      <div class="qa-q">
+        <div class="qa-q-label">Q</div>
+        <p>Should I use Premium Processing?</p>
+      </div>
+      <div class="qa-a">
+        <p>Premium Processing (Form I-907) guarantees a response — approval, RFE, or notice of intent to deny — within 45 business days. It does not guarantee approval. It does not reduce the substantive standard applied to your petition.</p>
+        <p>The fee is set by USCIS and changes periodically; verify the current amount on uscis.gov before filing. For candidates for whom time is a significant factor — H-1B status expiration, travel plans, or other timing pressures — Premium Processing may be worth the cost.</p>
+        <p>Note that receiving an RFE under Premium Processing restarts the clock. If you receive an RFE and respond, USCIS has another 45 business days from receipt of your response to issue a decision.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">All Answers Grounded In</div>
+      <p>Matter of Dhanasar, 26 I&amp;N Dec. 884 (AAO 2016); INA Section 203(b)(2)(B); 8 CFR 204.5(k); USCIS Policy Manual, Vol. 6, Part F, Ch. 5 (updated January 15, 2025).</p>
+    </div>
+
+    <div class="doc-disclaimer">
+      <strong>This guide is educational, not legal advice.</strong> Maintained by ImigraScore, a strategic intelligence service — not a law firm. Answers here reflect how the law applies in general. Individual case outcomes depend on specific evidence and circumstances. Before filing any immigration petition, retain a licensed immigration attorney.
+    </div>
+
+    <div class="doc-footer">
+      <a href="../index.html">Back to EB-2 Academy</a>
+      <a href="./dhanasar-framework.html">The Dhanasar Framework</a>
+    </div>
+  </main>
+</div>
+</body>
+</html>

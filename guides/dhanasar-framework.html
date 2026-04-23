@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Matter of Dhanasar: Complete Framework — EB-2 Academy</title>
+  <meta name="description" content="Complete technical breakdown of Matter of Dhanasar, 26 I&N Dec. 884 (AAO 2016). The controlling precedent for EB-2 NIW adjudication.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:#0f0f0e;--ink-2:#3a3a36;--ink-3:#7a7a72;--rule:#d4d0c8;--rule-2:#a8a49a;
+      --paper:#f8f6f1;--paper-2:#f2ede4;--accent:#1a3a2a;--accent-2:#2d5c42;--accent-pale:#e8f0ec;
+      --gold:#8b6914;--gold-pale:#f5f0e4;--font-d:'Cormorant Garamond',Georgia,serif;
+      --font-b:'DM Sans',system-ui,sans-serif;--font-m:'DM Mono',monospace;--measure:72ch;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{background:var(--paper);color:var(--ink);font-family:var(--font-b);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;}
+    .topbar{background:var(--accent);padding:.7rem 2rem;display:flex;align-items:center;justify-content:space-between;}
+    .topbar-brand{font-family:var(--font-d);font-size:1rem;font-weight:500;color:rgba(255,255,255,.9);text-decoration:none;}
+    .topbar-back{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:rgba(255,255,255,.6);text-decoration:none;transition:color .2s;}
+    .topbar-back:hover{color:rgba(255,255,255,.9);}
+    .page-wrap{display:grid;grid-template-columns:240px 1fr;min-height:100vh;max-width:1200px;margin:0 auto;}
+    aside{border-right:1px solid var(--rule);padding:2.5rem 1.5rem;position:sticky;top:0;height:100vh;overflow-y:auto;}
+    .aside-label{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.15em;color:var(--ink-3);margin-bottom:1rem;display:block;}
+    .toc{list-style:none;display:flex;flex-direction:column;gap:0;}
+    .toc li{border-bottom:1px solid var(--rule);}
+    .toc a{display:block;font-size:.8rem;color:var(--ink-2);text-decoration:none;padding:.6rem 0;transition:color .2s;line-height:1.4;}
+    .toc a:hover{color:var(--accent-2);}
+    .toc-section{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);padding:.8rem 0 .3rem;display:block;}
+    hr.aside-divider{border:none;border-top:1px solid var(--rule);margin:1.2rem 0;}
+    .aside-cite{background:var(--paper-2);padding:.8rem;font-family:var(--font-m);font-size:.62rem;color:var(--ink-3);line-height:1.6;}
+    .aside-cite strong{color:var(--ink-2);display:block;margin-bottom:.3rem;}
+    main{padding:3rem 3.5rem 5rem;max-width:800px;}
+    .doc-eyebrow{font-family:var(--font-m);font-size:.62rem;text-transform:uppercase;letter-spacing:.15em;color:var(--accent-2);margin-bottom:.8rem;}
+    .doc-title{font-family:var(--font-d);font-size:clamp(2rem,4vw,3.2rem);font-weight:300;line-height:1.1;margin-bottom:1rem;}
+    .doc-title em{font-style:italic;color:var(--accent-2);}
+    .doc-meta{font-family:var(--font-m);font-size:.65rem;color:var(--ink-3);margin-bottom:2rem;}
+    .doc-intro{font-size:1.05rem;color:var(--ink-2);line-height:1.85;max-width:var(--measure);padding-bottom:2rem;border-bottom:1px solid var(--rule);margin-bottom:2.5rem;}
+    h2{font-family:var(--font-d);font-size:1.8rem;font-weight:400;margin:3rem 0 1.2rem;padding-top:1rem;border-top:1px solid var(--rule);color:var(--ink);line-height:1.2;}
+    h2:first-of-type{margin-top:0;border-top:none;padding-top:0;}
+    h3{font-family:var(--font-d);font-size:1.25rem;font-weight:400;margin:2rem 0 .8rem;color:var(--ink);}
+    h4{font-family:var(--font-b);font-size:.82rem;font-weight:500;text-transform:uppercase;letter-spacing:.08em;margin:1.5rem 0 .5rem;color:var(--ink-2);}
+    p{font-size:.95rem;color:var(--ink-2);line-height:1.85;margin-bottom:1.1rem;max-width:var(--measure);}
+    p strong{color:var(--ink);font-weight:500;}
+    ul,ol{margin:.5rem 0 1.2rem;padding-left:1.5rem;max-width:var(--measure);}
+    li{font-size:.92rem;color:var(--ink-2);line-height:1.75;margin-bottom:.3rem;}
+    .callout{border-left:3px solid var(--accent);background:var(--accent-pale);padding:1rem 1.3rem;margin:1.5rem 0;max-width:var(--measure);}
+    .callout-label{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-2);margin-bottom:.4rem;}
+    .callout p{font-size:.88rem;color:var(--accent);margin-bottom:0;}
+    .callout-gold{border-left:3px solid var(--gold);background:var(--gold-pale);padding:1rem 1.3rem;margin:1.5rem 0;max-width:var(--measure);}
+    .callout-gold .callout-label{color:var(--gold);}
+    .callout-gold p{font-size:.88rem;color:#5a3a08;margin-bottom:0;}
+    blockquote{border-left:2px solid var(--rule-2);padding:.8rem 1.3rem;margin:1.5rem 0;max-width:var(--measure);}
+    blockquote p{font-family:var(--font-d);font-size:1.05rem;font-weight:300;font-style:italic;color:var(--ink);margin-bottom:.3rem;}
+    blockquote cite{font-family:var(--font-m);font-size:.62rem;color:var(--ink-3);}
+    .prong-card{border:1px solid var(--rule);margin:1.5rem 0 2rem;max-width:var(--measure);}
+    .prong-card-hdr{padding:.8rem 1.2rem;border-bottom:1px solid var(--rule);background:var(--paper-2);display:flex;align-items:baseline;gap:1rem;}
+    .prong-n{font-family:var(--font-d);font-size:2rem;font-weight:300;color:var(--rule-2);line-height:1;}
+    .prong-name{font-family:var(--font-d);font-size:1.15rem;font-weight:400;}
+    .prong-body{padding:1.2rem;}
+    .prong-body p{margin-bottom:.7rem;}
+    .prong-body p:last-child{margin-bottom:0;}
+    .prong-test{background:var(--accent-pale);border-left:2px solid var(--accent);padding:.8rem 1rem;margin:.8rem 0 0;}
+    .prong-test-lbl{font-family:var(--font-m);font-size:.58rem;text-transform:uppercase;letter-spacing:.12em;color:var(--accent-2);margin-bottom:.3rem;}
+    .prong-test p{font-size:.82rem;color:var(--accent);margin-bottom:0;}
+    hr{border:none;border-top:1px solid var(--rule);margin:2.5rem 0;}
+    .doc-footer{border-top:1px solid var(--rule);margin-top:4rem;padding-top:2rem;display:flex;justify-content:space-between;align-items:center;}
+    .doc-footer a{font-family:var(--font-m);font-size:.65rem;text-transform:uppercase;letter-spacing:.1em;color:var(--ink-3);text-decoration:none;transition:color .2s;}
+    .doc-footer a:hover{color:var(--accent-2);}
+    .doc-disclaimer{margin-top:1.5rem;padding:1rem 1.2rem;background:var(--paper-2);border:1px solid var(--rule);font-size:.78rem;color:var(--ink-3);line-height:1.7;max-width:var(--measure);}
+    .doc-disclaimer strong{color:var(--ink-2);}
+    @media(max-width:800px){.page-wrap{grid-template-columns:1fr;}aside{display:none;}main{padding:2rem 1.5rem 4rem;}}
+  </style>
+</head>
+<body>
+<div class="topbar">
+  <a href="../index.html" class="topbar-brand">EB-2 Academy</a>
+  <a href="../index.html" class="topbar-back">Back to main site</a>
+</div>
+<div class="page-wrap">
+  <aside>
+    <span class="aside-label">On this page</span>
+    <ul class="toc">
+      <li><span class="toc-section">Background</span></li>
+      <li><a href="#background">Why Dhanasar Matters</a></li>
+      <li><a href="#nysdot">The Prior Standard</a></li>
+      <li><span class="toc-section">The New Framework</span></li>
+      <li><a href="#eb2-first">EB-2 Eligibility First</a></li>
+      <li><a href="#prong-1">Prong I: Substantial Merit</a></li>
+      <li><a href="#prong-2">Prong II: Well Positioned</a></li>
+      <li><a href="#prong-3">Prong III: Beneficial to Waive</a></li>
+      <li><span class="toc-section">Application</span></li>
+      <li><a href="#case-applied">The Dhanasar Case Itself</a></li>
+      <li><a href="#jan-2025">January 2025 Update</a></li>
+    </ul>
+    <hr class="aside-divider">
+    <div class="aside-cite">
+      <strong>Full Citation</strong>
+      Matter of Dhanasar,<br>26 I&amp;N Dec. 884<br>(AAO 2016)<br>Decided Dec. 27, 2016
+    </div>
+  </aside>
+  <main>
+    <p class="doc-eyebrow">Controlling Precedent — Full Analysis</p>
+    <h1 class="doc-title">Matter of Dhanasar:<br><em>Complete Framework</em></h1>
+    <p class="doc-meta">EB-2 Academy &mdash; <em>Matter of Dhanasar</em>, 26 I&amp;N Dec. 884 (AAO 2016) &mdash; Updated with USCIS Policy Manual PA-2025-03, January 15, 2025</p>
+    <div class="doc-intro">
+      On December 27, 2016, the Administrative Appeals Office of USCIS decided Matter of Dhanasar, 26 I&amp;N Dec. 884 (AAO 2016). The decision vacated the 1998 standard established in Matter of New York State Dep't of Transp. (NYSDOT) and replaced it with a new three-part test for evaluating EB-2 National Interest Waiver petitions. That test has governed every NIW adjudication since — and remains controlling as of 2025.
+    </div>
+
+    <h2 id="background">Why This Decision Matters</h2>
+    <p>The national interest waiver allows qualified professionals to self-petition for U.S. permanent residency without a job offer or labor certification from a U.S. employer. The statutory basis is INA Section 203(b)(2)(B)(i), which permits the Secretary of Homeland Security to waive the job offer requirement "when the Secretary deems it to be in the national interest."</p>
+    <p>"National interest" is not defined by statute. The 1998 NYSDOT decision created a three-prong test, but that test — particularly its third prong — generated significant confusion and inconsistent adjudication for nearly two decades. Dhanasar replaced it with a clearer standard.</p>
+
+    <h2 id="nysdot">What Dhanasar Replaced</h2>
+    <p>The NYSDOT framework asked: (1) whether the area of employment had substantial intrinsic merit; (2) whether the benefit would be national in scope; and (3) whether the national interest would be adversely affected if labor certification were required.</p>
+    <p>The third prong was the problem. Dhanasar itself identified four different formulations of the third prong within the NYSDOT decision — inconsistencies that led to unpredictable adjudication and particular difficulty for entrepreneurs and self-employed individuals, who by definition had no employer against whom to run a labor market comparison.</p>
+    <div class="callout-gold">
+      <div class="callout-label">From the Decision</div>
+      <p>"NYSDOT's third prong can be misinterpreted to require the petitioner to submit, and the adjudicator to evaluate, evidence relevant to the very labor market test that the waiver is intended to forego." — 26 I&amp;N Dec. at 888.</p>
+    </div>
+
+    <h2 id="eb2-first">EB-2 Eligibility: The Threshold Step</h2>
+    <p>Before the three Dhanasar prongs are evaluated, USCIS must confirm that the petitioner qualifies for the underlying EB-2 classification — either as a member of the professions holding an advanced degree or as an individual of exceptional ability. This threshold requirement was made more explicit by the January 2025 USCIS policy update and applies to all petitions pending on or filed after January 15, 2025.</p>
+    <p>Qualifying for EB-2 is necessary but not sufficient. The NIW analysis is separate and additional.</p>
+
+    <h2 id="new-framework">The New Three-Prong Test</h2>
+    <p>Under Dhanasar, after EB-2 eligibility is established, USCIS may grant a national interest waiver if the petitioner demonstrates by a preponderance of the evidence:</p>
+
+    <div class="prong-card" id="prong-1">
+      <div class="prong-card-hdr">
+        <span class="prong-n">I</span>
+        <span class="prong-name">Substantial Merit and National Importance</span>
+      </div>
+      <div class="prong-body">
+        <p>The first prong is unified — it asks whether the proposed endeavor has both substantial merit and national importance together. These are not evaluated as separate tests but as a combined inquiry focused on the nature of the work itself.</p>
+        <p>Merit may be demonstrated in a range of areas: business, entrepreneurialism, science, technology, culture, health, or education. Economic impact is relevant but not required. Research, pure science, and the furtherance of human knowledge may qualify whether or not the potential accomplishments translate into economic benefits.</p>
+        <p>National importance is assessed by prospective impact, not geographic scope. Dhanasar specifically moved away from NYSDOT's "national in scope" formulation to avoid overemphasis on geography. A locally focused endeavor may have national importance if its implications are systemic. A regionally significant manufacturing improvement or a targeted public health intervention may satisfy this prong even without nationwide reach.</p>
+        <div class="prong-test">
+          <div class="prong-test-lbl">Key question</div>
+          <p>Does the proposed endeavor have real-world value in a recognized field, and does it carry implications at a scale that reaches beyond a single employer or region?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prong-card" id="prong-2">
+      <div class="prong-card-hdr">
+        <span class="prong-n">II</span>
+        <span class="prong-name">Well Positioned to Advance the Endeavor</span>
+      </div>
+      <div class="prong-body">
+        <p>The second prong shifts focus from the work to the person. USCIS considers: education, skills, knowledge, and record of success in related or similar efforts; a model or plan for future activities; any progress toward achieving the proposed endeavor; and the interest of potential customers, users, investors, or other relevant entities.</p>
+        <p>Dhanasar does not require petitioners to demonstrate that their endeavors are more likely than not to ultimately succeed. Many innovations and entrepreneurial endeavors fail despite intelligent plans and competent execution. The standard is well-positioned — not guaranteed success.</p>
+        <p>The proposed endeavor is central to this prong. It is not a career description or a statement of professional aspirations. It is a specific plan of work with identifiable objectives, measurable outcomes, and a defensible connection to the petitioner's documented background.</p>
+        <div class="prong-test">
+          <div class="prong-test-lbl">Key question</div>
+          <p>Does this person's documented background — education, track record, resources, and specific plan — position them to advance this specific endeavor in the United States?</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prong-card" id="prong-3">
+      <div class="prong-card-hdr">
+        <span class="prong-n">III</span>
+        <span class="prong-name">Beneficial to the United States to Waive on Balance</span>
+      </div>
+      <div class="prong-body">
+        <p>The third prong is a balancing test. Congress created both the labor certification requirement — to protect the domestic labor supply — and the national interest waiver — to recognize that in certain cases, other national interests outweigh it. The Secretary of Homeland Security is entrusted to balance them case by case.</p>
+        <p>Relevant factors include: whether it would be impractical to obtain a labor certification given the nature of the work; whether the United States would still benefit from this person's contributions even if qualified U.S. workers are available; and whether the urgency of the national interest warrants forgoing the labor market test.</p>
+        <p>Unlike the NYSDOT third prong, Dhanasar's third prong does not require a showing of harm to the national interest, nor does it require comparison against U.S. workers. It is designed to accommodate a greater variety of petitioners, including entrepreneurs and self-employed individuals.</p>
+        <div class="prong-test">
+          <div class="prong-test-lbl">Key question</div>
+          <p>Would the United States benefit sufficiently from this person's contributions that waiving the job offer and labor certification requirements, on balance, serves the national interest?</p>
+        </div>
+      </div>
+    </div>
+
+    <h2 id="case-applied">How the AAO Applied the Test</h2>
+    <p>The Dhanasar petitioner was a researcher and educator in aerospace engineering at North Carolina A&amp;T, holding two master's degrees and a Ph.D. His proposed endeavor was research and development in hypersonic propulsion systems — systems involving propulsion at speeds of Mach 5 and above — and STEM teaching.</p>
+    <p>On Prong I, the AAO found substantial merit in the research's aim to advance scientific knowledge and further national security interests. National importance was established through expert letters from individuals in academia, government, and industry, combined with documentation of congressional interest in hypersonic technologies and the strategic significance of U.S. advancement in this area.</p>
+    <p>On Prong II, the AAO found the petitioner well positioned based on his graduate degrees, experience developing validated computational models, significant roles in NASA-funded and Air Force Research Laboratory-funded projects, and consistent government investment in his research.</p>
+    <p>On Prong III, the AAO found the balance favorable given the petitioner's highly specialized record, the national security implications of the research, and the sustained government funding — indicating that his work provided value sufficient to warrant waiving the labor certification even assuming qualified U.S. workers were available.</p>
+    <p>Notably, the AAO declined to find national importance in the petitioner's proposed STEM teaching activities — not because teaching lacks merit, but because the record did not establish by a preponderance that his teaching would impact the field of STEM education more broadly. Each component of a proposed endeavor must independently satisfy the applicable prong.</p>
+
+    <blockquote>
+      <p>"The record demonstrates by a preponderance of the evidence that: (1) the petitioner's research in aerospace engineering has both substantial merit and national importance; (2) the petitioner is well positioned to advance his research; and (3) on balance, it is beneficial to the United States to waive the requirements of a job offer and thus of a labor certification."</p>
+      <cite>Matter of Dhanasar, 26 I&amp;N Dec. 884, 894 (AAO 2016)</cite>
+    </blockquote>
+
+    <h2 id="jan-2025">The January 2025 USCIS Policy Update</h2>
+    <p>On January 15, 2025, USCIS issued Policy Alert PA-2025-03, updating the Policy Manual at Volume 6, Part F, Chapter 5. The update does not change the Dhanasar three-prong test. Its effect is clarification, not modification.</p>
+    <p>Key clarifications: EB-2 threshold eligibility is now explicitly scrutinized before NIW review begins. For advanced degree professionals, the intended occupation must qualify as a profession; five years of experience must align with the specific specialty proposed. For exceptional ability claims, the ability demonstrated must relate directly to the proposed NIW endeavor. For entrepreneurs, business plans must go beyond general assertions — specific evidence of the petitioner's central, active role and the unique value of their particular skills is required.</p>
+    <div class="callout">
+      <div class="callout-label">Practical Effect</div>
+      <p>The January 2025 update makes the EB-2 eligibility step more explicit and increases scrutiny of proposed endeavors that rely primarily on letters and business plans without independent corroboration. Petitions filed or pending after January 15, 2025 are evaluated under this updated guidance.</p>
+    </div>
+
+    <div class="doc-disclaimer">
+      <strong>This guide is educational, not legal advice.</strong> Maintained by ImigraScore, a strategic intelligence service — not a law firm. Before filing any immigration petition, retain a licensed immigration attorney. Primary authority: <em>Matter of Dhanasar, 26 I&amp;N Dec. 884 (AAO 2016)</em>; USCIS Policy Manual, Vol. 6, Part F, Ch. 5 (updated January 15, 2025).
+    </div>
+
+    <div class="doc-footer">
+      <a href="../index.html">Back to EB-2 Academy</a>
+      <a href="./rfe-risk-signals.html">RFE Risk Signals</a>
+    </div>
+  </main>
+</div>
+</body>
+</html>

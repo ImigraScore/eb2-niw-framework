@@ -1,0 +1,59 @@
+---
+layout: compress
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ page.title | default: site.title }}</title>
+  <meta name="description" content="{{ page.description | default: site.description }}">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink:#0f0f0e;--ink-2:#3a3a36;--ink-3:#7a7a72;--rule:#d4d0c8;--rule-2:#a8a49a;
+      --paper:#f8f6f1;--paper-2:#f2ede4;--accent:#1a3a2a;--accent-2:#2d5c42;--accent-pale:#e8f0ec;
+      --gold:#8b6914;--gold-pale:#f5f0e4;--font-d:'Cormorant Garamond',Georgia,serif;
+      --font-b:'DM Sans',system-ui,sans-serif;--font-m:'DM Mono',monospace;--measure:72ch;
+    }
+    *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+    html{font-size:16px;scroll-behavior:smooth;}
+    body{background:var(--paper);color:var(--ink);font-family:var(--font-b);font-weight:300;line-height:1.7;-webkit-font-smoothing:antialiased;}
+    .container{max-width:1200px;margin:0 auto;padding:2rem;}
+    .header{text-align:center;margin-bottom:3rem;padding-bottom:2rem;border-bottom:1px solid var(--rule);}
+    .header h1{font-family:var(--font-d);font-size:2.5rem;font-weight:300;color:var(--ink);margin-bottom:1rem;}
+    .header p{font-size:1.1rem;color:var(--ink-2);max-width:800px;margin:0 auto;}
+    .content{max-width:800px;margin:0 auto;}
+    h1,h2,h3,h4,h5,h6{font-family:var(--font-d);font-weight:400;margin:2rem 0 1rem;color:var(--ink);line-height:1.2;}
+    h1{font-size:2rem;} h2{font-size:1.8rem;} h3{font-size:1.4rem;} h4{font-size:1.2rem;}
+    p{font-size:1rem;color:var(--ink-2);line-height:1.8;margin-bottom:1.5rem;}
+    ul,ol{margin:1rem 0;padding-left:2rem;}
+    li{margin-bottom:0.5rem;}
+    a{color:var(--accent-2);text-decoration:none;}
+    a:hover{text-decoration:underline;}
+    .callout{border-left:4px solid var(--accent);background:var(--accent-pale);padding:1.5rem;margin:2rem 0;}
+    .footer{text-align:center;margin-top:4rem;padding-top:2rem;border-top:1px solid var(--rule);color:var(--ink-3);font-size:0.9rem;}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header class="header">
+      <h1>EB-2 NIW Academy</h1>
+      <p>A free educational resource for EB-2 National Interest Waiver candidates. Grounded in Matter of Dhanasar.</p>
+    </header>
+
+    <main class="content">
+      {{ content }}
+    </main>
+
+    <footer class="footer">
+      <p>&copy; 2026 ImigraScore. Licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+      <p>This is educational material only, not legal advice.</p>
+    </footer>
+  </div>
+</body>
+</html>

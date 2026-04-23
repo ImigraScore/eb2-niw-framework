@@ -1,0 +1,387 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>RFE Risk Signals by Prong — EB-2 Academy</title>
+  <meta name="description" content="Documented RFE risk signals across the three Dhanasar prongs. What USCIS questions and how to preempt.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Mono:wght@300;400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #0f0f0e; --ink-2: #3a3a36; --ink-3: #7a7a72;
+      --rule: #d4d0c8; --rule-2: #a8a49a;
+      --paper: #f8f6f1; --paper-2: #f2ede4;
+      --accent: #1a3a2a; --accent-2: #2d5c42; --accent-pale: #e8f0ec;
+      --gold: #8b6914; --gold-pale: #f5f0e4;
+      --warn-pale: #f8f0e8; --warn: #7a3c0a;
+      --font-d: 'Cormorant Garamond', Georgia, serif;
+      --font-b: 'DM Sans', system-ui, sans-serif;
+      --font-m: 'DM Mono', monospace;
+      --measure: 72ch;
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { font-size: 16px; scroll-behavior: smooth; }
+    body { background: var(--paper); color: var(--ink); font-family: var(--font-b); font-weight: 300; line-height: 1.7; -webkit-font-smoothing: antialiased; }
+
+    /* TOP BAR */
+    .topbar { background: var(--accent); padding: .7rem 2rem; display: flex; align-items: center; justify-content: space-between; }
+    .topbar-brand { font-family: var(--font-d); font-size: 1rem; font-weight: 500; color: rgba(255,255,255,.9); text-decoration: none; }
+    .topbar-back { font-family: var(--font-m); font-size: .62rem; text-transform: uppercase; letter-spacing: .1em; color: rgba(255,255,255,.6); text-decoration: none; transition: color .2s; }
+    .topbar-back:hover { color: rgba(255,255,255,.9); }
+
+    /* LAYOUT */
+    .page-wrap { display: grid; grid-template-columns: 240px 1fr; min-height: 100vh; max-width: 1200px; margin: 0 auto; }
+
+    /* SIDEBAR */
+    aside { border-right: 1px solid var(--rule); padding: 2.5rem 1.5rem; position: sticky; top: 0; height: 100vh; overflow-y: auto; }
+    .aside-label { font-family: var(--font-m); font-size: .58rem; text-transform: uppercase; letter-spacing: .15em; color: var(--ink-3); margin-bottom: 1rem; display: block; }
+    .toc { list-style: none; display: flex; flex-direction: column; gap: 0; }
+    .toc li { border-bottom: 1px solid var(--rule); }
+    .toc a { display: block; font-size: .8rem; color: var(--ink-2); text-decoration: none; padding: .6rem 0; transition: color .2s; line-height: 1.4; }
+    .toc a:hover { color: var(--accent-2); }
+    .toc a.active { color: var(--accent); font-weight: 500; }
+    .toc-section { font-family: var(--font-m); font-size: .58rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-3); padding: .8rem 0 .3rem; display: block; }
+    .aside-divider { border: none; border-top: 1px solid var(--rule); margin: 1.2rem 0; }
+    .aside-cite { background: var(--paper-2); padding: .8rem; font-family: var(--font-m); font-size: .62rem; color: var(--ink-3); line-height: 1.6; }
+    .aside-cite strong { color: var(--ink-2); display: block; margin-bottom: .3rem; }
+
+    /* CONTENT */
+    main { padding: 3rem 3.5rem 5rem; max-width: 800px; }
+
+    /* DOCUMENT HEADER */
+    .doc-eyebrow { font-family: var(--font-m); font-size: .62rem; text-transform: uppercase; letter-spacing: .15em; color: var(--accent-2); margin-bottom: .8rem; }
+    .doc-title { font-family: var(--font-d); font-size: clamp(2rem, 4vw, 3.2rem); font-weight: 300; line-height: 1.1; margin-bottom: 1rem; }
+    .doc-title em { font-style: italic; color: var(--accent-2); }
+    .doc-meta { font-family: var(--font-m); font-size: .65rem; color: var(--ink-3); margin-bottom: 2rem; }
+    .doc-intro { font-size: 1.05rem; color: var(--ink-2); line-height: 1.85; max-width: var(--measure); padding-bottom: 2rem; border-bottom: 1px solid var(--rule); margin-bottom: 2.5rem; }
+
+    /* SECTION HEADERS */
+    h2 { font-family: var(--font-d); font-size: 1.8rem; font-weight: 400; margin: 3rem 0 1.2rem; padding-top: 1rem; border-top: 1px solid var(--rule); color: var(--ink); line-height: 1.2; }
+    h2:first-of-type { margin-top: 0; border-top: none; padding-top: 0; }
+    h3 { font-family: var(--font-d); font-size: 1.25rem; font-weight: 400; margin: 2rem 0 .8rem; color: var(--ink); }
+    h4 { font-family: var(--font-b); font-size: .82rem; font-weight: 500; text-transform: uppercase; letter-spacing: .08em; margin: 1.5rem 0 .5rem; color: var(--ink-2); }
+
+    /* BODY TEXT */
+    p { font-size: .95rem; color: var(--ink-2); line-height: 1.85; margin-bottom: 1.1rem; max-width: var(--measure); }
+    p strong { color: var(--ink); font-weight: 500; }
+    p em { font-style: italic; }
+
+    /* LISTS */
+    ul, ol { margin: .5rem 0 1.2rem 0; padding-left: 1.5rem; max-width: var(--measure); }
+    li { font-size: .92rem; color: var(--ink-2); line-height: 1.75; margin-bottom: .3rem; }
+    li strong { color: var(--ink); font-weight: 500; }
+
+    /* CALLOUTS */
+    .callout { border-left: 3px solid var(--accent); background: var(--accent-pale); padding: 1rem 1.3rem; margin: 1.5rem 0; max-width: var(--measure); }
+    .callout-label { font-family: var(--font-m); font-size: .58rem; text-transform: uppercase; letter-spacing: .12em; color: var(--accent-2); margin-bottom: .4rem; }
+    .callout p { font-size: .88rem; color: var(--accent); margin-bottom: 0; }
+
+    .callout-warn { border-left: 3px solid var(--gold); background: var(--gold-pale); padding: 1rem 1.3rem; margin: 1.5rem 0; max-width: var(--measure); }
+    .callout-warn .callout-label { color: var(--gold); }
+    .callout-warn p { color: var(--warn); }
+
+    .callout-risk { border-left: 3px solid #b84a2a; background: #faf0ec; padding: 1rem 1.3rem; margin: 1.5rem 0; max-width: var(--measure); }
+    .callout-risk .callout-label { color: #b84a2a; }
+    .callout-risk p { color: #7a2c1a; }
+
+    /* SIGNAL CARD */
+    .signal-card { border: 1px solid var(--rule); margin: 1.5rem 0 2rem; max-width: var(--measure); }
+    .signal-card-hdr { padding: .8rem 1.2rem; border-bottom: 1px solid var(--rule); display: flex; align-items: center; justify-content: space-between; gap: 1rem; }
+    .signal-num { font-family: var(--font-m); font-size: .6rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-3); }
+    .signal-title { font-family: var(--font-d); font-size: 1.1rem; font-weight: 400; }
+    .risk-badge { font-family: var(--font-m); font-size: .58rem; text-transform: uppercase; letter-spacing: .08em; padding: .2rem .6rem; white-space: nowrap; }
+    .risk-high { background: #b84a2a; color: white; }
+    .risk-mod { background: var(--gold); color: white; }
+    .risk-low { background: var(--accent-2); color: white; }
+    .signal-body { padding: 1.2rem; }
+    .signal-body p { margin-bottom: .7rem; }
+    .signal-body p:last-child { margin-bottom: 0; }
+    .signal-question { font-family: var(--font-d); font-size: 1rem; font-style: italic; color: var(--ink); margin-bottom: .8rem; }
+
+    /* COMPARISON */
+    .compare { display: grid; grid-template-columns: 1fr 1fr; gap: 0; border: 1px solid var(--rule); margin: 1.5rem 0; max-width: var(--measure); }
+    .compare-col { padding: 1.2rem; }
+    .compare-col:first-child { border-right: 1px solid var(--rule); }
+    .compare-label { font-family: var(--font-m); font-size: .58rem; text-transform: uppercase; letter-spacing: .1em; margin-bottom: .6rem; display: block; }
+    .compare-label.weak { color: #b84a2a; }
+    .compare-label.strong { color: var(--accent-2); }
+    .compare-text { font-size: .85rem; color: var(--ink-2); line-height: 1.7; font-style: italic; }
+
+    /* QUOTE */
+    blockquote { border-left: 2px solid var(--rule-2); padding: .8rem 1.3rem; margin: 1.5rem 0; max-width: var(--measure); }
+    blockquote p { font-family: var(--font-d); font-size: 1.05rem; font-weight: 300; font-style: italic; color: var(--ink); margin-bottom: .3rem; }
+    blockquote cite { font-family: var(--font-m); font-size: .62rem; color: var(--ink-3); }
+
+    /* HORIZONTAL RULE */
+    hr { border: none; border-top: 1px solid var(--rule); margin: 2.5rem 0; }
+
+    /* FOOTER NAV */
+    .doc-footer { border-top: 1px solid var(--rule); margin-top: 4rem; padding-top: 2rem; display: flex; justify-content: space-between; align-items: center; }
+    .doc-footer a { font-family: var(--font-m); font-size: .65rem; text-transform: uppercase; letter-spacing: .1em; color: var(--ink-3); text-decoration: none; transition: color .2s; }
+    .doc-footer a:hover { color: var(--accent-2); }
+    .doc-disclaimer { margin-top: 1.5rem; padding: 1rem 1.2rem; background: var(--paper-2); border: 1px solid var(--rule); font-size: .78rem; color: var(--ink-3); line-height: 1.7; max-width: var(--measure); }
+    .doc-disclaimer strong { color: var(--ink-2); }
+
+    /* RESPONSIVE */
+    @media (max-width: 800px) {
+      .page-wrap { grid-template-columns: 1fr; }
+      aside { display: none; }
+      main { padding: 2rem 1.5rem 4rem; }
+    }
+
+    /* SCROLL HIGHLIGHT */
+    :target { scroll-margin-top: 2rem; }
+  </style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <a href="../index.html" class="topbar-brand">EB-2 Academy</a>
+  <a href="../index.html" class="topbar-back">Back to main site</a>
+</div>
+
+<div class="page-wrap">
+
+  <!-- SIDEBAR -->
+  <aside>
+    <span class="aside-label">On this page</span>
+    <ul class="toc">
+      <li><span class="toc-section">Overview</span></li>
+      <li><a href="#rfe-landscape">The RFE Landscape</a></li>
+      <li><span class="toc-section">Prong I Signals</span></li>
+      <li><a href="#signal-1-1">1.1 Third-Party Validation</a></li>
+      <li><a href="#signal-1-2">1.2 Scope of Work</a></li>
+      <li><a href="#signal-1-3">1.3 Field Recognition</a></li>
+      <li><span class="toc-section">Prong II Signals</span></li>
+      <li><a href="#signal-2-1">2.1 Proposed Endeavor Vagueness</a></li>
+      <li><a href="#signal-2-2">2.2 Disconnect from Background</a></li>
+      <li><a href="#signal-2-3">2.3 Execution Feasibility</a></li>
+      <li><span class="toc-section">Prong III Signals</span></li>
+      <li><a href="#signal-3-1">3.1 Labor Market Availability</a></li>
+      <li><a href="#signal-3-2">3.2 Self-Employment / Entrepreneurs</a></li>
+      <li><span class="toc-section">Presentation</span></li>
+      <li><a href="#presentation">Documentation Quality</a></li>
+    </ul>
+    <hr class="aside-divider">
+    <div class="aside-cite">
+      <strong>Controlling Authority</strong>
+      Matter of Dhanasar,<br>26 I&amp;N Dec. 884<br>(AAO 2016)
+    </div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main>
+
+    <p class="doc-eyebrow">Risk Analysis — All Three Prongs</p>
+    <h1 class="doc-title">RFE Risk Signals<br><em>by Prong</em></h1>
+    <p class="doc-meta">EB-2 Academy &mdash; Based on Matter of Dhanasar, 26 I&amp;N Dec. 884 (AAO 2016) and USCIS Policy Manual, Vol. 6, Part F, Ch. 5 (updated January 2025)</p>
+
+    <div class="doc-intro">
+      A Request for Evidence is USCIS asking you to provide additional documentation to support your petition. It is not a denial. Responding successfully can result in approval. What the signals below identify are the evidentiary patterns most commonly challenged — the places where an underprepared petition most often draws a question. Understanding them before filing allows you to preempt them.
+    </div>
+
+    <div class="callout-warn">
+      <div class="callout-label">Note on RFE Data</div>
+      <p>USCIS does not publish RFE rates by category. The signals documented here reflect analysis of adjudication patterns. They are not statistical claims. Treat them as areas of known scrutiny, not as probabilities.</p>
+    </div>
+
+    <h2 id="rfe-landscape">The RFE Landscape</h2>
+    <p>RFEs occur when USCIS determines that the evidence in the record is insufficient to establish, by a preponderance, one or more of the required elements. Under Dhanasar, all three prongs must be satisfied. A gap in any one can generate a request. A gap across multiple prongs often generates a compound request — one document, multiple questions.</p>
+    <p>The structure of most RFEs follows the prong structure of Dhanasar. Understanding which prong a signal belongs to helps you anticipate the likely form of any challenge before it arrives.</p>
+
+    <h2 id="prong-1">Prong I: Substantial Merit and National Importance</h2>
+
+    <div class="signal-card" id="signal-1-1">
+      <div class="signal-card-hdr">
+        <span class="signal-num">Signal 1.1</span>
+        <span class="signal-title">Weak or Absent Third-Party Validation</span>
+        <span class="risk-badge risk-high">High Risk</span>
+      </div>
+      <div class="signal-body">
+        <p class="signal-question">"How do we know this work has impact beyond your own claims?"</p>
+        <p>Substantial merit cannot rest on self-attestation. USCIS evaluates what external sources — independent of the petitioner and employer — say about the work. Absence of third-party evidence on this prong is the most common source of RFEs for Prong I.</p>
+        <h4>What generates this signal</h4>
+        <ul>
+          <li>No peer-reviewed publications</li>
+          <li>No citations to your work by others</li>
+          <li>No competitive awards</li>
+          <li>No patents (granted or in active use)</li>
+          <li>No media coverage from recognized outlets</li>
+          <li>No invitation to speak at recognized conferences</li>
+        </ul>
+        <h4>Preemption</h4>
+        <p>Inventory every piece of third-party evidence before filing. Quantify where possible. "Twelve peer-reviewed publications including two in top-quartile journals" is materially stronger than "multiple publications." If your third-party evidence is limited, be explicit about what you have and frame it within the full evidentiary picture rather than allowing the gap to appear unacknowledged.</p>
+        <div class="compare">
+          <div class="compare-col">
+            <span class="compare-label weak">Generates RFE Risk</span>
+            <p class="compare-text">"I have published research in my field and received recognition from colleagues."</p>
+          </div>
+          <div class="compare-col">
+            <span class="compare-label strong">Preempts RFE Risk</span>
+            <p class="compare-text">"The petitioner has published 9 peer-reviewed articles, 4 of which have been cited by researchers at NIST and Stanford. She received the 2023 IEEE Young Investigator Award (competitive; 3% acceptance rate)."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="signal-card" id="signal-1-2">
+      <div class="signal-card-hdr">
+        <span class="signal-num">Signal 1.2</span>
+        <span class="signal-title">National Importance Without Documented Need</span>
+        <span class="risk-badge risk-high">High Risk</span>
+      </div>
+      <div class="signal-body">
+        <p class="signal-question">"Where is the documented evidence that this is a national-scale problem?"</p>
+        <p>Under Dhanasar, national importance requires broader implications — not just that the field matters in general, but that a documented need exists at national scale and that this specific work addresses it. Asserting importance without sourcing it to published documentation is the second most common Prong I RFE trigger.</p>
+        <h4>What generates this signal</h4>
+        <ul>
+          <li>National importance argued through logic alone, without external documentation</li>
+          <li>Citing secondary sources (news articles, blog posts) instead of primary government or research sources</li>
+          <li>Documenting that a field matters broadly without connecting the petitioner's specific work to the documented need</li>
+          <li>Overly geographic framing when broader systemic impact is what Dhanasar requires</li>
+        </ul>
+        <h4>Preemption</h4>
+        <p>Identify 2–3 authoritative published sources — government agency reports (NIH, CDC, NSF, DOL, HHS), peer-reviewed systematic reviews, or official policy documents — that establish the documented need. Then make the connection explicit: this specific work addresses this specific documented need. The connection must be direct, not inferential.</p>
+      </div>
+    </div>
+
+    <div class="signal-card" id="signal-1-3">
+      <div class="signal-card-hdr">
+        <span class="signal-num">Signal 1.3</span>
+        <span class="signal-title">Field Recognition Limited to Employer Scope</span>
+        <span class="risk-badge risk-mod">Moderate Risk</span>
+      </div>
+      <div class="signal-body">
+        <p class="signal-question">"Is the recognition of this work limited to the petitioner's employer or immediate professional circle?"</p>
+        <p>When all letters of recommendation come from the same institution, when all evidence of impact refers to internal outcomes, and when no external professional community has validated the work, USCIS may find that substantial merit has not been established at the required level.</p>
+        <h4>Preemption</h4>
+        <p>At least one or two letters should come from experts who have no institutional affiliation with the petitioner. Independent expert letters that can speak to the significance of the work from the outside carry substantially more weight than employer or close-colleague testimonials.</p>
+      </div>
+    </div>
+
+    <h2 id="prong-2">Prong II: Well Positioned to Advance the Endeavor</h2>
+
+    <div class="signal-card" id="signal-2-1">
+      <div class="signal-card-hdr">
+        <span class="signal-num">Signal 2.1</span>
+        <span class="signal-title">Vague or Generic Proposed Endeavor</span>
+        <span class="risk-badge risk-high">High Risk</span>
+      </div>
+      <div class="signal-body">
+        <p class="signal-question">"What specifically will you do, and how would you know if you succeeded?"</p>
+        <p>The proposed endeavor is the most frequently challenged element across all EB-2 NIW petitions. USCIS requires a specific plan of work — not a career description, not a broad statement of professional direction, and not a reiteration of past accomplishments. The January 2025 USCIS policy update made this requirement more explicit: business plans and letters of support are relevant but not self-executing without independent corroborating evidence.</p>
+        <h4>What generates this signal</h4>
+        <ul>
+          <li>Proposed endeavor written as a career statement ("I plan to continue my research in...")</li>
+          <li>No measurable outcomes defined</li>
+          <li>No timeline or milestones</li>
+          <li>Interchangeable with any other professional in the same field</li>
+          <li>No identified collaborators, funders, or institutional resources</li>
+        </ul>
+        <div class="compare">
+          <div class="compare-col">
+            <span class="compare-label weak">Career Description</span>
+            <p class="compare-text">"I will continue to conduct research in machine learning and publish findings that benefit the field."</p>
+          </div>
+          <div class="compare-col">
+            <span class="compare-label strong">Proposed Endeavor</span>
+            <p class="compare-text">"Within 18 months, I will develop and open-source a validated ML model for early-stage pancreatic cancer detection, in collaboration with UCSF Radiology, targeting the 57,600 annual U.S. cases where early detection significantly improves survival outcomes."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="signal-card" id="signal-2-2">
+      <div class="signal-card-hdr">
+        <span class="signal-num">Signal 2.2</span>
+        <span class="signal-title">Proposed Endeavor Disconnected from Professional History</span>
+        <span class="risk-badge risk-high">High Risk</span>
+      </div>
+      <div class="signal-body">
+        <p class="signal-question">"Why is this person — specifically — positioned to advance this work?"</p>
+        <p>Being well positioned requires that the petitioner's background directly supports their ability to execute the proposed endeavor. When the proposed work represents a significant pivot from the petitioner's documented history, USCIS will question why this person — as opposed to any other professional — is the right person for this work.</p>
+        <h4>Preemption</h4>
+        <p>The narrative connecting past work to the proposed endeavor must be explicit. If the proposed work is adjacent to (but not identical to) prior work, the connection requires explanation. If it represents a significant pivot, reconsider whether the endeavor accurately reflects the most defensible direction for this specific petitioner.</p>
+      </div>
+    </div>
+
+    <div class="signal-card" id="signal-2-3">
+      <div class="signal-card-hdr">
+        <span class="signal-num">Signal 2.3</span>
+        <span class="signal-title">Plan Lacks Evidence of Feasibility</span>
+        <span class="risk-badge risk-mod">Moderate Risk</span>
+      </div>
+      <div class="signal-body">
+        <p class="signal-question">"Is there any evidence beyond the petitioner's own claims that this plan is realistic?"</p>
+        <p>Dhanasar explicitly states that USCIS does not require petitioners to demonstrate that their endeavors are more likely than not to ultimately succeed. However, petitioners must establish by a preponderance of the evidence that they are well positioned to advance the proposed endeavor. A plan without any external evidence of support — no funding, no institutional affiliation, no letters expressing interest from potential collaborators or users — is harder to defend than one with these anchors.</p>
+        <h4>Preemption</h4>
+        <p>Identify any existing evidence of external interest: a letter from a research institution, a grant award, a collaboration agreement, a contractual relationship, or a letter from a prospective employer or client. These do not need to be formal commitments — expressions of genuine interest from credible parties carry weight.</p>
+      </div>
+    </div>
+
+    <h2 id="prong-3">Prong III: Beneficial to Waive on Balance</h2>
+
+    <div class="signal-card" id="signal-3-1">
+      <div class="signal-card-hdr">
+        <span class="signal-num">Signal 3.1</span>
+        <span class="signal-title">No Argument for Why Labor Certification Should Be Waived</span>
+        <span class="risk-badge risk-mod">Moderate Risk</span>
+      </div>
+      <div class="signal-body">
+        <p class="signal-question">"Why should the job offer and labor certification requirements be waived for this person?"</p>
+        <p>Prong III is a balancing test. Many petitions invest heavily in Prongs I and II and offer little direct argument on Prong III. Under Dhanasar, the relevant factors include: whether it would be impractical to secure a labor certification given the nature of the work; whether the U.S. would still benefit even if qualified U.S. workers exist; and whether urgency warrants forgoing the labor market test.</p>
+        <h4>Preemption</h4>
+        <p>Address Prong III directly. For researchers, the urgency and uniqueness of the specific line of work is often the strongest argument. For entrepreneurs, the impracticality of the labor certification process for self-employment is a recognized basis under Dhanasar. For practitioners in shortage areas, documented shortage data from HRSA or similar agencies strengthens the balance.</p>
+      </div>
+    </div>
+
+    <div class="signal-card" id="signal-3-2">
+      <div class="signal-card-hdr">
+        <span class="signal-num">Signal 3.2</span>
+        <span class="signal-title">Entrepreneur or Self-Employed Petitioner Without Specific Evidence</span>
+        <span class="risk-badge risk-mod">Moderate Risk</span>
+      </div>
+      <div class="signal-body">
+        <p class="signal-question">"How does this entrepreneur's active, central role in a U.S. entity advance the proposed endeavor?"</p>
+        <p>The January 2025 USCIS policy update specifically addressed entrepreneurs. General assertions about economic contributions or job creation are not sufficient. USCIS requires specific evidence demonstrating the petitioner's active and central role in a U.S.-based entity, including detailed market metrics, projected growth, and evidence that their specific knowledge or skills advance the endeavor in ways that go beyond what is ordinarily available.</p>
+        <h4>Preemption</h4>
+        <p>Business plans must go beyond assertions. Include market data with sources, specific projections grounded in comparable entities, and clear articulation of what the petitioner's unique role is — not what any competent manager could provide, but what this person's specific background enables.</p>
+      </div>
+    </div>
+
+    <h2 id="presentation">Presentation and Documentation Quality</h2>
+
+    <div class="signal-card" id="presentation">
+      <div class="signal-card-hdr">
+        <span class="signal-num">Signal 4.1</span>
+        <span class="signal-title">General Letters Without Specific Attestation</span>
+        <span class="risk-badge risk-mod">Moderate Risk</span>
+      </div>
+      <div class="signal-body">
+        <p class="signal-question">"These letters describe the petitioner's expertise, but do they establish the national importance of the proposed endeavor?"</p>
+        <p>The 2025 USCIS policy update clarified that letters of recommendation are relevant but carry less weight when they do not go beyond endorsing the petitioner's general qualifications. Letters should speak specifically to the national importance of the work, the petitioner's unique positioning, and — where relevant — the significance of the proposed endeavor to the field or to a documented national need.</p>
+      </div>
+    </div>
+
+    <div class="callout">
+      <div class="callout-label">Core Principle</div>
+      <p>Most RFEs can be preempted. The signals above represent known patterns. Addressing them in the initial petition — with specific evidence, not general assertions — is substantially more effective than responding to them after the fact.</p>
+    </div>
+
+    <div class="doc-disclaimer">
+      <strong>This guide is educational, not legal advice.</strong> Maintained by ImigraScore, a strategic intelligence service. ImigraScore is not a law firm. Before filing any immigration petition, retain a licensed immigration attorney. The patterns described here reflect analysis of adjudication practice; individual case outcomes vary significantly based on the specific evidence presented. Primary authority: <em>Matter of Dhanasar, 26 I&amp;N Dec. 884 (AAO 2016)</em>; USCIS Policy Manual, Vol. 6, Part F, Ch. 5 (updated January 15, 2025).
+    </div>
+
+    <div class="doc-footer">
+      <a href="../index.html">Back to EB-2 Academy</a>
+      <a href="./dhanasar-framework.html">The Dhanasar Framework</a>
+    </div>
+
+  </main>
+
+</div>
+</body>
+</html>
