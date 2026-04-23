@@ -2,7 +2,8 @@
 
 **Release Date:** April 22, 2026  
 **Author:** Wederson Marinho  
-**Repository:** https://github.com/imigrascore/eb2-niw-framework
+**Repository:** https://github.com/imigrascore/eb2-niw-framework  
+**Permanent DOI:** https://doi.org/10.5281/zenodo.19709462
 
 ---
 
