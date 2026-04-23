@@ -13,6 +13,20 @@
 
 ---
 
+## At a Glance: In Plain Terms
+
+The EB-2 NIW process is often perceived as a "black box" of legal jargon. This framework is a structured system designed to open that box by demonstrating how USCIS officers actually analyze petitions under the *Matter of Dhanasar* standard.
+
+**Instead of guessing, this framework enables you to:**
+*   **Decode Adjudication Logic** — Understand the underlying "why" behind officer decisions.
+*   **Identify Red Flags** — Spot 12 documented patterns that trigger RFEs before you file.
+*   **Measure Case Strength** — Use measurable signals to determine if your profile is Strong, Moderate, or needs more evidence.
+*   **Structure Your Strategy** — Align your background with the specific legal "prongs" required for a waiver.
+
+*Note: This is an analytical tool to help you prepare. It does not replace the need for professional legal review.*
+
+---
+
 ## What Is This?
 
 *The EB-2 NIW Framework* is a structured technical resource for interpreting and applying the *Matter of Dhanasar* standard (AAO 2016) within U.S. EB-2 National Interest Waiver adjudication.
